@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+	default-lazy-init="true">
+
+	<!-- 两个Resolver以及一个Interceptor是Portal框架插入到Rose的接口实现 -->
+
+	<bean id="portalResolver" class="com.laxser.blitz.web.portal.impl.PortalResolver">
+		<property name="portalFactory" ref="portalFactory" />
+	</bean>
+
+	<bean id="windowResolver" class="com.laxser.blitz.web.portal.impl.WindowResolver" />
+
+	<bean id="portalWaitInterceptor" class="com.laxser.blitz.web.portal.impl.PortalWaitInterceptor" />
+
+	<bean id="mergeWindowAttributesToModelInterceptor"
+		class="com.laxser.blitz.web.portal.impl.MergeWindowAttributesToModelInterceptor" />
+
+	<!--
+		portalBeanPostProcessor读取web.xml的配置，初始化portalExecutor中的参数，以及从applicationContext识别PortalListener对象进行登记添加
+	-->
+
+	<bean id="portalBeanPostProcessor"
+		class="com.laxser.blitz.web.portal.impl.PortalBeanPostProcessor" />
+
+	<bean id="portalFactory" class="com.laxser.blitz.web.portal.impl.PortalFactoryDelegate">
+		<property name="portalFactoryName" value="laziedPortalFactoryTaget" />
+	</bean>
+
+	<bean id="laziedPortalFactoryTaget" class="com.laxser.blitz.web.portal.impl.PortalFactoryImpl">
+		<property name="executorService" ref="portalExecutorService" />
+		<property name="portalListener" ref="portalListeners" />
+	</bean>
+
+	<bean id="portalExecutorService"
+		class="com.laxser.blitz.web.portal.impl.ThreadPoolExcutorServiceFactoryBean">
+		<property name="threadPoolTaskExecutor">
+			<bean id="portalExecutor"
+				class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor" />
+		</property>
+	</bean>
+
+	<bean id="portalListeners" class="com.laxser.blitz.web.portal.PortalListeners">
+		<property name="listeners" ref="portalListenerList" />
+	</bean>
+
+
+	<util:list id="portalListenerList">
+		<bean class="com.laxser.blitz.web.portal.PortalLoggerListener" />
+	</util:list>
+
+
+
+</beans>
