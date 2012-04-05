@@ -29,9 +29,12 @@ import com.laxser.blitz.web.Invocation;
 import com.laxser.blitz.web.InvocationUtils;
 
 /**
- * 在jsp中支持 flash标签
+ * 在jsp中支持 flash标签，其实这里只是临时解决策略，计划使用jsp taglib支持更多更灵活的标签形式
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 上午11:29:10
+@contact [duqifan@gmail.com]
+@FlashTag.java
+
  * 
  */
 public class FlashTag extends TagSupport {

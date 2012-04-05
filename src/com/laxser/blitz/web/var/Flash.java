@@ -23,7 +23,7 @@ import java.util.Map;
  * <p>
  * 
  * 由于默认采用的是Cookie的实现，所以这个机制只能在同一个域名的下使用
- * 
+ * 对于跨域名的方法，我们建议使用SOA
  * @author laxser  Date 2012-3-22 下午4:58:00
 @contact [duqifan@gmail.com]
 @Flash.java
