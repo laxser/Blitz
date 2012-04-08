@@ -29,7 +29,10 @@ import java.lang.annotation.Target;
  * <p>
  * 
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 下午3:08:06
+@contact [duqifan@gmail.com]
+@SuppressMultipartResolver.java
+
  * 
  */
 @Target( { ElementType.METHOD })

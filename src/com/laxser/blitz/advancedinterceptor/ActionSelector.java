@@ -19,7 +19,10 @@ import java.lang.reflect.Method;
 
 /**
  * 
- * @author laxser
+ * @author laxser  Date 2012-4-7 下午5:52:06
+@contact [duqifan@gmail.com]
+@ActionSelector.java
+
  * 
  */
 public interface ActionSelector {

@@ -34,7 +34,10 @@ import java.lang.annotation.Target;
  * 3、如果对xyz标注了@Post("abc")，xyz代表的是资源/user/abc，并且仅支持POST访问<br>
  * 
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:08:44
+@contact [duqifan@gmail.com]
+@Post.java
+
  */
 @Target( { ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

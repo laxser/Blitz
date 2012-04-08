@@ -37,8 +37,11 @@ import com.laxser.blitz.web.impl.thread.LinkedEngine;
 import com.laxser.blitz.web.impl.thread.ModuleEngine;
 
 /**
- * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * 构造Blitz匹配树，一棵树能够同时满足遍历匹配的顺序要求
+ * @author laxser  Date 2012-4-5 下午3:17:57
+@contact [duqifan@gmail.com]
+@TreeBuilder.java
+
  * 
  */
 public class TreeBuilder {

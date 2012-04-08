@@ -19,7 +19,10 @@ import com.laxser.blitz.web.Dispatcher;
 
 /**
  * 
- * @author laxser
+ * @author laxser  Date 2012-4-7 下午5:52:19
+@contact [duqifan@gmail.com]
+@DispatcherSelector.java
+
  * 
  */
 public interface DispatcherSelector {

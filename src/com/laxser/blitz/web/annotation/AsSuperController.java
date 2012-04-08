@@ -29,7 +29,10 @@ import java.lang.annotation.Target;
  * {@link AsSuperController}的类A的方法仍旧不能作为action方法暴露出来。 <br>
  * 但是如果类B标注了{@link AsSuperController}，则类A和B的方法将暴露给类C作为action方法。
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:02:48
+@contact [duqifan@gmail.com]
+@AsSuperController.java
+
  * 
  */
 @Target( { ElementType.TYPE })

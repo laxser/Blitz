@@ -25,8 +25,10 @@ import com.laxser.blitz.web.RequestPath;
 
 /**
  * {@link MappingNode}代表匹配树的一个结点，树的结点能够包含一个或多个被称为资源的 {@link EngineGroup} 对象
- * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * 其实这就是普通树的遍历～
+ * @author laxser  Date 2012-4-5 下午3:15:29
+@contact [duqifan@gmail.com]
+@MappingNode.java
  * 
  */
 public class MappingNode implements Comparable<MappingNode> {

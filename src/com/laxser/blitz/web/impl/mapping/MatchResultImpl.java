@@ -17,7 +17,10 @@ package com.laxser.blitz.web.impl.mapping;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:20:34
+@contact [duqifan@gmail.com]
+@MatchResultImpl.java
+
  * 
  */
 public class MatchResultImpl implements MatchResult {

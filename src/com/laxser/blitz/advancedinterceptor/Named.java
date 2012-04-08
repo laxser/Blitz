@@ -17,7 +17,10 @@ package com.laxser.blitz.advancedinterceptor;
 
 /**
  * 如果拦截器实现这个接口那么将拦截所有名字顺序的
- * @author laxser
+ *@author laxser  Date 2012-4-7 下午5:52:35
+@contact [duqifan@gmail.com]
+@Named.java
+
  * 
  */
 public interface Named  {

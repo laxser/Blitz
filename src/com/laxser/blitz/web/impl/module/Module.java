@@ -39,7 +39,10 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
  * 映射规则以模块的路径为依据(名字此时不参与这个决策)。
  * <p>
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:23:24
+@contact [duqifan@gmail.com]
+@Module.java
+
  */
 public interface Module {
 

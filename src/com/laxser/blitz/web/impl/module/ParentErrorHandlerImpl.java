@@ -23,7 +23,10 @@ import com.laxser.blitz.web.impl.thread.InvocationBean;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:24:19
+@contact [duqifan@gmail.com]
+@ParentErrorHandlerImpl.java
+
  * 
  */
 public class ParentErrorHandlerImpl implements ParentErrorHandler {

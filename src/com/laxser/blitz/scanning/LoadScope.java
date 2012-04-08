@@ -22,7 +22,7 @@ import java.util.Map.Entry;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * 
+ * 根据开发设置的LoadScope来配置生成LoadScope对象
  * @author laxser  Date 2012-3-23 下午3:15:28
 @contact [duqifan@gmail.com]
 @LoadScope.java

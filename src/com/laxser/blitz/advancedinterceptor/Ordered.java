@@ -23,6 +23,7 @@ package com.laxser.blitz.advancedinterceptor;
 @Ordered.java
  * 
  */
+
 public interface Ordered {
 
     /**

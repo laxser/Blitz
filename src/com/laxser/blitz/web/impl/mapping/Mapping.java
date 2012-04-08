@@ -25,7 +25,10 @@ package com.laxser.blitz.web.impl.mapping;
  * {@link Mapping}对象的排序比较只和定义该映射的地址有关，和所绑定的 {@link MappingNode} 无关。不同的
  * {@link Mapping}实现都支持之间的互相比较。
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:14:55
+@contact [duqifan@gmail.com]
+@Mapping.java
+
  * 
  */
 public interface Mapping extends Comparable<Mapping> {

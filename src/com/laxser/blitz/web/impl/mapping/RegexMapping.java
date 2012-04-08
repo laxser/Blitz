@@ -19,9 +19,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * 
+ *正则映射，将资源后面的正则表达式匹配到相应的路径上去 
+ * @author laxser  Date 2012-4-5 下午3:19:52
+@contact [duqifan@gmail.com]
+@RegexMapping.java
+
  */
 public class RegexMapping implements Mapping {
 
@@ -85,7 +87,7 @@ public class RegexMapping implements Mapping {
     @Override
     public MatchResult match(CharSequence path) {
         Matcher matcher = pattern.matcher(path);
-        // TODO find? matches?
+        // TODO find? matches?    找到其他的映射去匹配
         if (!matcher.find()) {
             return null;
         }

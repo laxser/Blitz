@@ -25,7 +25,10 @@ import java.lang.annotation.Target;
  * 将{@link FlashParam}标注在控制器方法的参数上，重定向之前的的信息.
  * <p>
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:03:45
+@contact [duqifan@gmail.com]
+@FlashParam.java
+
  * 
  */
 @Target( { ElementType.PARAMETER })

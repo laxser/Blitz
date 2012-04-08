@@ -43,7 +43,10 @@ import com.laxser.blitz.web.annotation.rest.Trace;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:21:19
+@contact [duqifan@gmail.com]
+@ControllerRef.java
+
  * 
  */
 public class ControllerRef {
@@ -96,7 +99,6 @@ public class ControllerRef {
                                     + controllerClass.getName() + "#" + method.getName());
                         }
                     } else {
-                        // TODO: 这个代码是为了使从0.9到1.0比较顺畅而做的判断，201007之后可以考虑删除掉
                         if ("get".equals(method.getName()) || "index".equals(method.getName())) {
                             // 这个异常的意思是让大家在get/index上明确标注@Get，请注意@Get的意思
                             throw new IllegalArgumentException("please add @Get to "

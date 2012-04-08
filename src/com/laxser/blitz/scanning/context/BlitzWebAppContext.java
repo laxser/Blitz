@@ -39,7 +39,7 @@ import com.laxser.blitz.scanning.LoadScope;
 import com.laxser.blitz.scanning.context.core.BlitzResources;
 
 /**
- * 
+ *配置WebAppContext
  * @author laxser  Date 2012-3-22 下午4:36:43
 @contact [duqifan@gmail.com]
 @BlitzWebAppContext.java

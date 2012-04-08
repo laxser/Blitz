@@ -54,17 +54,17 @@ public class ResourceRef implements Comparable<ResourceRef> {
     public static ResourceRef toResourceRef(Resource folder) throws IOException {
         ResourceRef rr = new ResourceRef(folder, null, null);
         String[] modifiers = null;
-        Resource rosePropertiesResource = rr.getInnerResource("META-INF/rose.properties");
-        if (rosePropertiesResource.exists()) {
+        Resource blitzPropertiesResource = rr.getInnerResource("META-INF/blitz.properties");
+        if (blitzPropertiesResource.exists()) {
             if (logger.isDebugEnabled()) {
-                logger.debug("found rose.properties: " + rosePropertiesResource.getURI());
+                logger.debug("found blitz.properties: " + blitzPropertiesResource.getURI());
             }
-            InputStream in = rosePropertiesResource.getInputStream();
+            InputStream in = blitzPropertiesResource.getInputStream();
             rr.properties.load(in);
             in.close();
-            String attrValue = rr.properties.getProperty("rose");
+            String attrValue = rr.properties.getProperty("blitz");
             if (attrValue == null) {
-                attrValue = rr.properties.getProperty("Rose");
+                attrValue = rr.properties.getProperty("Blitz");
             }
             if (attrValue != null) {
                 modifiers = StringUtils.split(attrValue, ", ;\n\r\t");
@@ -87,9 +87,9 @@ public class ResourceRef implements Comparable<ResourceRef> {
                 Manifest manifest = jarFile.getManifest();
                 if (manifest != null) {
                     Attributes attributes = manifest.getMainAttributes();
-                    String attrValue = attributes.getValue("rose");
+                    String attrValue = attributes.getValue("blitz");
                     if (attrValue == null) {
-                        attrValue = attributes.getValue("Rose");
+                        attrValue = attributes.getValue("Blitz");
                     }
                     if (attrValue != null) {
                         modifiers = StringUtils.split(attrValue, ", ;\n\r\t");
@@ -134,7 +134,7 @@ public class ResourceRef implements Comparable<ResourceRef> {
     public void setModifiers(String[] modifiers) {
         this.modifiers = modifiers;
         if (modifiers == null) {
-            properties.remove("rose");
+            properties.remove("blitz");
         } else {
             StringBuilder sb = new StringBuilder();
             final String separator = ", ";
@@ -144,7 +144,7 @@ public class ResourceRef implements Comparable<ResourceRef> {
             if (sb.length() > 0) {
                 sb.setLength(sb.length() - separator.length());
             }
-            properties.put("rose", sb.toString());
+            properties.put("blitz", sb.toString());
         }
     }
 
@@ -182,7 +182,7 @@ public class ResourceRef implements Comparable<ResourceRef> {
         }
         return subPath;
     }
-
+    //所有的压缩文档均当成jar做处理
     public String getProtocol() {
         if (resource.getFilename().toLowerCase().endsWith(".jar")
                 || resource.getFilename().toLowerCase().endsWith(".zip")

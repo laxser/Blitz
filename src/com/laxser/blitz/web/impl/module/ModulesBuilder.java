@@ -25,7 +25,10 @@ import com.laxser.blitz.scanner.ModuleResource;
 /**
  * 根据输入的module类信息，构造出具体的Module结构出来
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 下午3:24:04
+@contact [duqifan@gmail.com]
+@ModulesBuilder.java
+
  */
 public interface ModulesBuilder {
 

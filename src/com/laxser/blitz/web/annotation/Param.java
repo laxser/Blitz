@@ -37,7 +37,10 @@ import com.laxser.blitz.web.var.Model;
  * 数组的规则是请求参数以名为param_value的所有request参数。如果只有一个参数，则将该参数按照逗号做切割分成数组<br>
  * Map,List,Set均只支持String类型的；数组可以支持String类型以及一般的int/Integer等类型的。
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:06:25
+@contact [duqifan@gmail.com]
+@Param.java
+
  * 
  */
 @Target( { ElementType.PARAMETER })

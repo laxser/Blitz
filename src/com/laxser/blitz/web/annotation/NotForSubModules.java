@@ -29,7 +29,10 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
  * 使用 {@link NotForSubModules} 标注在编写在模块目录中的拦截器、错误处理器
  * {@link ControllerErrorHandler}、 参数解析器 {@link ParamResolver} 上，表示不应用到子模块
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 下午3:06:12
+@contact [duqifan@gmail.com]
+@NotForSubModules.java
+
  */
 @Target( { ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

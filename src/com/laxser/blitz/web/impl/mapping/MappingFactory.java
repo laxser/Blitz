@@ -21,7 +21,10 @@ import java.util.List;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:15:02
+@contact [duqifan@gmail.com]
+@MappingFactory.java
+
  * 
  */
 public class MappingFactory {

@@ -27,7 +27,10 @@ import java.lang.annotation.Target;
  * 如用于时间参数解析，可以使用 @Pattern("MM/dd/yyyy")来解析"03/12/2010"的字符串!
  * 
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:07:00
+@contact [duqifan@gmail.com]
+@Pattern.java
+
  * 
  */
 @Target( { ElementType.PARAMETER })

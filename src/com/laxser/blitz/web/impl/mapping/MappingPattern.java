@@ -20,7 +20,10 @@ package com.laxser.blitz.web.impl.mapping;
  * 
  * @see MatchMode
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 下午3:17:22
+@contact [duqifan@gmail.com]
+@MappingPattern.java
+
  * 
  */
 public interface MappingPattern {

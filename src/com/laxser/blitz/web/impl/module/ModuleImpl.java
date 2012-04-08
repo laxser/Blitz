@@ -31,7 +31,10 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
 /**
  * {@link Module}的实现
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:23:53
+@contact [duqifan@gmail.com]
+@ModuleImpl.java
+
  */
 public class ModuleImpl implements Module {
 

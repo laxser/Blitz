@@ -24,7 +24,10 @@ import java.lang.annotation.Target;
 /**
  * 使用 {@link Interceptor} 标注一个控制器拦截器的名字以及其他设置
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:05:15
+@contact [duqifan@gmail.com]
+@Interceptor.java
+
  * 
  */
 @Target( { ElementType.TYPE, ElementType.FIELD })

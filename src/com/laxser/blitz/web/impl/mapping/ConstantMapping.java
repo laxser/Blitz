@@ -16,7 +16,13 @@
 package com.laxser.blitz.web.impl.mapping;
 
 import com.laxser.blitz.util.BlitzStringUtil;
+/**
+ *常量的一些映射定义 
+ * @author laxser  Date 2012-4-5 下午3:11:46
+@contact [duqifan@gmail.com]
+@ConstantMapping.java
 
+ */
 public class ConstantMapping implements Mapping {
 
     /** 该映射代表的结点 */

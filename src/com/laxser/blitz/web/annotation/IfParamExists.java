@@ -26,7 +26,10 @@ import java.lang.annotation.Target;
  * 
  * 注意：{@link IfParamExists}只判断query string中的参数，不判断request body中的参数。
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:04:06
+@contact [duqifan@gmail.com]
+@IfParamExists.java
+
  * 
  */
 @Target( { ElementType.METHOD })

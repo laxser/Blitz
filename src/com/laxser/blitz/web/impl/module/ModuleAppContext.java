@@ -42,7 +42,10 @@ import org.springframework.web.context.support.XmlWebApplicationContext;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:23:43
+@contact [duqifan@gmail.com]
+@ModuleAppContext.java
+
  * 
  */
 public class ModuleAppContext extends XmlWebApplicationContext {

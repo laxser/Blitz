@@ -18,8 +18,10 @@ package com.laxser.blitz.web.impl.mapping;
 /**
  * 控制器的action path参数映射结果,从这个结果中可以知道一个地址映射给哪个资源、资源的参数值是什么
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * 
+ *
+ * @author laxser  Date 2012-4-5 下午3:20:54
+@contact [duqifan@gmail.com]
+@MatchResult.java
  */
 public interface MatchResult {
 

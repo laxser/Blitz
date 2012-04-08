@@ -26,7 +26,10 @@ import com.laxser.blitz.web.annotation.ReqMethod;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:23:11
+@contact [duqifan@gmail.com]
+@MethodRef.java
+
  * 
  */
 public class MethodRef {

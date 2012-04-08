@@ -24,7 +24,10 @@ import com.laxser.blitz.util.BlitzStringUtil;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:17:33
+@contact [duqifan@gmail.com]
+@MatchMode.java
+
  * 
  */
 public enum MatchMode {

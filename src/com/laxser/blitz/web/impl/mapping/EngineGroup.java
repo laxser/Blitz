@@ -26,9 +26,11 @@ import com.laxser.blitz.web.impl.thread.LinkedEngine;
  * {@link EngineGroup} 代表一个 {@link Engine} 集合，一个 {@link Mapping} 可能含一个
  * {@link EngineGroup}实例，也可能包含多个；
  * <p>
- * 原类名WebResource，2010年5月改为EngineGroup
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:14:05
+@contact [duqifan@gmail.com]
+@EngineGroup.java
+
  * 
  */
 public interface EngineGroup {

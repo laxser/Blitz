@@ -31,7 +31,10 @@ import com.laxser.blitz.web.paramresolver.ResolverFactoryImpl.HttpSessionResolve
  * {@link Create} 为false，表示如果原先没有 HttpSession 时，保留为null，不用创建。
  * 
  * @see HttpSessionResolver
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:03:15
+@contact [duqifan@gmail.com]
+@Create.java
+
  * 
  */
 @Target( { ElementType.PARAMETER })

@@ -31,7 +31,10 @@ import com.laxser.blitz.web.impl.thread.LinkedEngine;
 /**
  * 
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 下午3:14:35
+@contact [duqifan@gmail.com]
+@EngineGroupImpl.java
+
  * 
  */
 public class EngineGroupImpl implements EngineGroup {

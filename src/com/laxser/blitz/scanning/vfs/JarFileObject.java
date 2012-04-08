@@ -28,7 +28,7 @@ import java.util.jar.JarFile;
 import org.springframework.util.ResourceUtils;
 
 /**
- * 
+ * JarFile对象，用于处理导入的Jar模块
  * @author laxser  Date 2012-3-23 下午3:13:53
 @contact [duqifan@gmail.com]
 @JarFileObject.java

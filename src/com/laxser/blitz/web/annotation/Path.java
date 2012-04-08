@@ -24,7 +24,10 @@ import java.lang.annotation.Target;
 /**
  * 标注 {@link Path}设置对控制器的自定义映射规则。
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-5 下午3:06:44
+@contact [duqifan@gmail.com]
+@Path.java
+
  * 
  */
 @Target( { ElementType.TYPE })

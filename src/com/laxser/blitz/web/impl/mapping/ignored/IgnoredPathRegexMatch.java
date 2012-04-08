@@ -4,7 +4,12 @@ import java.util.regex.Pattern;
 
 import com.laxser.blitz.web.RequestPath;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@renren-inc.com
+ * date: 2012-4-5
+ */
 public class IgnoredPathRegexMatch implements IgnoredPath {
 
     private Pattern path;

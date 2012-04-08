@@ -86,7 +86,7 @@ public interface FileObject {
     FileObject getChild(String name) throws IOException;
 
     /**
-     * 文件实体内容，如果是目录将抛出IOE异常
+     * 文件实体内容，如果是目录将抛出IO异常
      * 
      * @return
      * @throws IOException

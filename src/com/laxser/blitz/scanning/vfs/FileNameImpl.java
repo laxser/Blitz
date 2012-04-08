@@ -18,7 +18,7 @@ package com.laxser.blitz.scanning.vfs;
 import java.io.IOException;
 
 /**
- * 
+ * FileName的实现类用于VFS文件相关的基础操作
  * @author laxser  Date 2012-3-23 下午3:13:01
 @contact [duqifan@gmail.com]
 @FileNameImpl.java

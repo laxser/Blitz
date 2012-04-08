@@ -34,7 +34,10 @@ import java.lang.annotation.Target;
  * 3、如果对xyz标注了@Delete("abc")，xyz代表的是资源/user/abc，并且仅支持DELETE访问<br>
  * 
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:09:46
+@contact [duqifan@gmail.com]
+@Delete.java
+
  */
 @Target( { ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

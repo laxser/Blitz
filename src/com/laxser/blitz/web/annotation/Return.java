@@ -25,7 +25,10 @@ import java.lang.annotation.Target;
  * 使用 {@link Return}
  * 标注用于action方法为void类型时，模拟return语句，让Rose框架把它当成该action方法的返回值
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:07:58
+@contact [duqifan@gmail.com]
+@Return.java
+
  * 
  */
 @Target( { ElementType.METHOD })

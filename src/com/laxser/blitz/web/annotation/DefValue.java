@@ -23,7 +23,10 @@ import java.lang.annotation.Target;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-5 下午3:03:26
+@contact [duqifan@gmail.com]
+@DefValue.java
+
  * 
  */
 @Target( { ElementType.PARAMETER })
@@ -31,7 +34,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface DefValue {
 
-    String NATIVE_DEFAULT = "$$paoding-rose.param.nativeDefualt";
+    String NATIVE_DEFAULT = "$$blitz.param.nativeDefualt";
 
     /**
      * 设置该参数的默认值，如果请求中没有该参数的话，或者发生转化错误时

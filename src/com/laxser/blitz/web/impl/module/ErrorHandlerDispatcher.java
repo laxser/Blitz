@@ -31,7 +31,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author zhiliang.wang
+ * @author laxser  Date 2012-4-5 下午3:22:59
+@contact [duqifan@gmail.com]
+@ErrorHandlerDispatcher.java
+
  * 
  */
 public class ErrorHandlerDispatcher implements ControllerErrorHandler {

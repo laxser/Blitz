@@ -350,7 +350,7 @@ public class BlitzFilter extends GenericFilterBean {
         }
     }
 
-    // @see net.paoding.Blitz.web.portal.impl.PortalWaitInterceptor#waitForWindows
+    // @see com.laxser.blitz.web.portal.impl.PortalWaitInterceptor#waitForWindows
     protected void supportsBlitzpipe(final HttpServletRequest httpRequest) {
         // 这个代码为Blitzpipe所用，以避免Blitzpipe的"Cannot forward after response has been committed"异常
         // @see net.paoding.Blitz.web.portal.impl.PortalWaitInterceptor

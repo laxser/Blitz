@@ -119,7 +119,7 @@ public class ToolsController {
         ArrayList<MatchResult> matchResults = tree.match(testPath);
         if (matchResults == null) {
             // not blitz uri
-            return ("@404: <br>not blitz uri: '" + testUri + "'");
+            return ("@404: <br>Not blitz uri: '" + testUri + "'");
         }
 
         final MatchResult lastMatched = matchResults.get(matchResults.size() - 1);
@@ -129,7 +129,7 @@ public class ToolsController {
         if (leafEngine == null) {
             if (leafEngineGroup.size() == 0) {
                 // not blitz uri
-                return ("@404: <br>not blitz uri, not exits leaf engines for it: '" + testUri + "'");
+                return ("@404: <br>not blitz uri, not exsits leaf engines for it: '" + testUri + "'");
 
             } else {
                 // 405 Method Not Allowed
