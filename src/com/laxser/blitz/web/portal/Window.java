@@ -24,7 +24,9 @@ import java.util.concurrent.Future;
  * {@link Window}封装了一个portal下的窗口信息，包括该窗口的名字、请求地址以及处理完后最终的响应状态和页面文本内容。
  * <p>
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:45:08
+@contact [duqifan@gmail.com]
+@Window.java
  * 
  */
 public interface Window {

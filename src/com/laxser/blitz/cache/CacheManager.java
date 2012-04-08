@@ -16,7 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 对于每一个访问来说，有自己的Cache。对于每一个请求来说，可以假设用户在这个时间内访问同一个数据是不变的，比方说自己的名字，姓别等等
  * 
- * @author lookis(comic.liu@gmail.com)
+ *@author laxser  Date 2012-4-8 下午5:27:28
+@contact [duqifan@gmail.com]
+@CacheManager.java
+
  *
  */
 public class CacheManager implements Map<Object,Object>{

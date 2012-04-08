@@ -21,7 +21,7 @@ import org.springframework.validation.Errors;
 import com.laxser.blitz.web.paramresolver.ParamMetaData;
 
 /**
- * 
+ * 请求参数的验证器
  *@author laxser  Date 2012-3-22 下午4:53:25
 @contact [duqifan@gmail.com]
 @ParamValidator.java

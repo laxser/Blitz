@@ -234,11 +234,6 @@ public class PipeImpl extends GenericWindowContainer implements Pipe {
         return "pipe ['" + getInvocation().getRequestPath().getUri() + "']";
     }
 
-	@Override
-	public void addModel(String name, Object value)
-	{
-		// TODO Auto-generated method stub
-		
-	}
+
 
 }

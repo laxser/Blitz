@@ -10,7 +10,10 @@ import java.lang.annotation.Target;
 /**
  * 合并各个window的数据模型到Portal中
  * 
- * @author xylz(xylz@live.cn)
+ * @author laxser  Date 2012-4-8 下午5:30:35
+@contact [duqifan@gmail.com]
+@MergeWindowModel.java
+
  * @see {@link MergeWindowModelInterceptor}
  */
 @Inherited

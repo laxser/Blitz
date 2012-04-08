@@ -11,8 +11,10 @@ import com.laxser.blitz.util.TimeCostUtil;
 
 /**
  * 性能监控的拦截器，将每个方法的执行时间记录下来，此类依赖{@link TimeCostUtil}
- * @author xylz(xylz@live.cn)
- * @since 20091106
+ *@author laxser  Date 2012-4-8 下午5:31:13
+@contact [duqifan@gmail.com]
+@Performance.java
+
  * @see {@link TimeCostUtil}
  *
  */

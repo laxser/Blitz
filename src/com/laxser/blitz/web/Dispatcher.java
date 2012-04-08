@@ -17,7 +17,10 @@ package com.laxser.blitz.web;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:38:56
+@contact [duqifan@gmail.com]
+@Dispatcher.java
+
  * 
  */
 public enum Dispatcher {

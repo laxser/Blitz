@@ -14,8 +14,10 @@ import com.laxser.blitz.web.Invocation;
 /**
  * a {@link ControllerInterceptor} which logging the costing time
  * 
- * @author xylz(xylz@live.cn)
- * @since 20091106
+ *@author laxser  Date 2012-4-8 下午5:32:20
+@contact [duqifan@gmail.com]
+@PerformanceInterceptor.java
+
  * @see {@link ControllerInterceptor}
  * @see {@link TimeCostUtil}
  * 

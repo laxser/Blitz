@@ -12,7 +12,10 @@ import java.lang.annotation.Target;
 
 /**
  * 
- * @author lookis (comic.liu@gmail.com)
+ * @author laxser  Date 2012-4-8 下午5:29:42
+@contact [duqifan@gmail.com]
+@CookieCleaner.java
+
  * 
  */
 @Inherited

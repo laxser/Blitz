@@ -22,8 +22,9 @@ import com.laxser.blitz.web.Invocation;
 /**
  * service cutting implementation.
  * 
- * @author xylz(xylz@live.cn)
- * @since 2010-1-6
+ * @author laxser  Date 2012-4-8 下午5:32:47
+@contact [duqifan@gmail.com]
+@ServiceCutterInterceptor.java
  */
 public class ServiceCutterInterceptor extends ControllerInterceptorAdapter {
 

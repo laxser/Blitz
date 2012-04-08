@@ -4,8 +4,6 @@ import java.lang.annotation.Annotation;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 
 import com.laxser.blitz.util.TimeCostUtil;
 import com.laxser.blitz.web.ControllerInterceptor;
@@ -19,8 +17,10 @@ import com.laxser.blitz.web.portal.Window;
  * a {@link ControllerInterceptor} which merges all the model of window to the
  * portal
  * 
- * @author xylz(xylz@live.cn)
- * @since 20091106
+ *@author laxser  Date 2012-4-8 下午5:31:00
+@contact [duqifan@gmail.com]
+@MergeWindowModelInterceptor.java
+
  * @see {@link Window}
  * @see {@link ControllerInterceptor}
  * @see {@link Portal}

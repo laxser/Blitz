@@ -18,7 +18,10 @@ package com.laxser.blitz.web.portal;
 /**
  * 窗口的状态侦听器
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:45:34
+@contact [duqifan@gmail.com]
+@WindowListener.java
+
  * 
  */
 public interface WindowListener {

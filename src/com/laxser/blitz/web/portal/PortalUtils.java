@@ -21,7 +21,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:45:02
+@contact [duqifan@gmail.com]
+@PortalUtils.java
+
  * 
  */
 public class PortalUtils {
@@ -35,11 +38,11 @@ public class PortalUtils {
     public static Portal getPortal(Invocation inv) {
         // get from invocation attributes
         // @see PortalResolver#resolve
-        return (Portal) inv.getAttribute("$$paoding-rose-portal.portal");
+        return (Portal) inv.getAttribute("$$blitz-portal.portal");
     }
 
     public static Pipe getPipe(Invocation inv) {
         // get from head invocation attributes
-        return (Pipe) inv.getHeadInvocation().getAttribute("$$paoding-rose-portal.pipe");
+        return (Pipe) inv.getHeadInvocation().getAttribute("$$blitz-portal.pipe");
     }
 }

@@ -32,7 +32,7 @@ import com.laxser.blitz.scanning.ResourceRef;
 import com.laxser.blitz.scanning.BlitzScanner;
 
 /**
- * 
+ * 用于配置Blitz自身的applicationContext
  * @author laxser  Date 2012-3-23 下午3:11:49
 @contact [duqifan@gmail.com]
 @BlitzResources.java

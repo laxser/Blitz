@@ -43,11 +43,6 @@ public class PortalImpl extends GenericWindowContainer implements Portal, Window
         return "portal ['" + getInvocation().getRequestPath().getUri() + "']";
     }
 
-	@Override
-	public void addModel(String name, Object value)
-	{
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }

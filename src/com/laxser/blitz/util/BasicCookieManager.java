@@ -1,4 +1,4 @@
-package com.laxser.blitz.interceptors;
+package com.laxser.blitz.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -7,24 +7,27 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * cookie管理类
- * @author yunlong.bai@opi-corp.com
+ * @author laxser  Date 2012-4-8 下午4:15:20
+@contact [duqifan@gmail.com]
+@BasicCookieManager.java
+
  *
  */
 
 
-public class CookieManager {
-	private static CookieManager instance;
+public class BasicCookieManager {
+	private static BasicCookieManager instance;
 	
 	
 	
 	//FIXME  :  添加Domain 的策略
 	private  String domainMain;
 
-	public static CookieManager getInstance() {
+	public static BasicCookieManager getInstance() {
 		if (instance == null)
-			synchronized (CookieManager.class) {
+			synchronized (BasicCookieManager.class) {
 				if (instance == null)
-					instance = new CookieManager();
+					instance = new BasicCookieManager();
 			}
 
 		return instance;

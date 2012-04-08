@@ -18,7 +18,10 @@ import com.laxser.blitz.web.annotation.ResourceProtected;
  * {@link ResourceProtectionInterceptor} 拦截对Web控制器的调用，
  * 对POST请求进行referer验证，防止外站提交。
  * 
- * @author 王志亮 zhiliang.wang@opi-corp.com
+ * @author laxser  Date 2012-4-8 下午5:28:53
+@contact [duqifan@gmail.com]
+@ResourceProtectionInterceptor.java
+
  * 
  */
 @Interceptor(oncePerRequest = true)
@@ -26,6 +29,8 @@ public class ResourceProtectionInterceptor extends ControllerInterceptorAdapter 
 
     private Log logger = LogFactory.getLog(getClass());
 
+    
+    //FIXME: 通过配置统一的配置路径来做校验
     private String domainMain;
     private String domainStatic;
     private String urlHome;

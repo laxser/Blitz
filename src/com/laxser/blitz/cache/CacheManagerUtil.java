@@ -7,8 +7,9 @@ import javax.servlet.http.HttpServletRequest;
  * Using {@link CacheManagerResolver} if you want to using this in Spring or
  * Rose.
  * 
- * @author xylz(xylz@live.cn)
- * @since 20091102
+@author laxser  Date 2012-4-8 下午5:28:34
+@contact [duqifan@gmail.com]
+@CacheManagerUtil.java
  */
 public class CacheManagerUtil {
 	private static Object lock = new Object();

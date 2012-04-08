@@ -14,10 +14,10 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
  * 如果想使用此类的功能但是又不想使用反射（即不想使用spring)，那么可以使用{@link CacheManagerUtil}。<br />
  * This method is thread-safety.
  * 
- * @author lookis (comic.liu@gmail.com)
- * @author xylz(xylz@live.cn)
- * @see {@link CacheManagerUtil}
- * @see 20091104
+ * @author laxser  Date 2012-4-8 下午5:28:25
+@contact [duqifan@gmail.com]
+@CacheManagerResolver.java
+
  * 
  */
 public class CacheManagerResolver implements ParamResolver {

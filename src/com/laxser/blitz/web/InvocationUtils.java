@@ -33,18 +33,18 @@ public class InvocationUtils {
 
     //
     public static void bindInvocationToRequest(Invocation inv, HttpServletRequest request) {
-        request.setAttribute("$$paoding-rose.invocation", inv);
+        request.setAttribute("$$blitz.invocation", inv);
     }
 
     public static void unbindInvocationFromRequest(HttpServletRequest request) {
-        request.removeAttribute("$$paoding-rose.invocation");
+        request.removeAttribute("$$blitz.invocation");
     }
 
     public static Invocation getInvocation(HttpServletRequest request) {
         if (request == null) {
             return null;
         }
-        return (Invocation) request.getAttribute("$$paoding-rose.invocation");
+        return (Invocation) request.getAttribute("$$blitz.invocation");
     }
 
     public static void unindRequestFromCurrentThread() {

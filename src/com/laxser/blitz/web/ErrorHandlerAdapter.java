@@ -19,7 +19,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:38:46
+@contact [duqifan@gmail.com]
+@ErrorHandlerAdapter.java
+
  * 
  */
 public class ErrorHandlerAdapter implements ControllerErrorHandler {

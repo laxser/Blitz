@@ -16,8 +16,10 @@ import java.util.concurrent.TimeUnit;
  * Cutting service while timeout. Put the annotation on class or method,
  * and the priority of method is higher than class if exist.
  * 
- * @author xylz(xylz@live.cn)
- * @since 2010-1-6
+ * @author laxser  Date 2012-4-8 下午5:32:33
+@contact [duqifan@gmail.com]
+@ServiceCutter.java
+
  */
 @Inherited
 @Target( { ElementType.TYPE, ElementType.METHOD })

@@ -27,7 +27,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 /**
- * 仅仅提供Rose框架内部使用，外部程序请勿调用.
+ * 仅仅提供Blitz框架内部使用，外部程序请勿调用.
  * 
  * @author laxser  Date 2012-3-22 下午5:02:30
 @contact [duqifan@gmail.com]
@@ -36,7 +36,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  */
 public final class PrivateVar {
 
-    // 当前环境的ServletContext对象，由RoseFilter初始化时设置通过servletContext(ServlerContext)设置进来
+    // 当前环境的ServletContext对象，由BlitzFilter初始化时设置通过servletContext(ServlerContext)设置进来
     //    private static ServletContext servletContext;
 
     // ---------------------------------------------------------------
@@ -59,7 +59,7 @@ public final class PrivateVar {
         throw new AssertionError();
     }
 
-    private static Properties roseProperties;
+    private static Properties blitzProperties;
 
     public static String getProperty(ServletContext servletContext, String name) {
         return getProperty(servletContext, name, null);
@@ -71,20 +71,20 @@ public final class PrivateVar {
      * @return
      */
     public static String getProperty(ServletContext servletContext, String name, String def) {
-        if (roseProperties == null) {
-            String rosePropertiesPath = "rose.properties";
+        if (blitzProperties == null) {
+            String blitzPropertiesPath = "blitz.properties";
             if (servletContext != null) {
-                rosePropertiesPath = "/WEB-INF/rose.properties";
+                blitzPropertiesPath = "/WEB-INF/blitz.properties";
             }
-            Properties roseProperties = new Properties();
-            File file = new File(servletContext.getRealPath(rosePropertiesPath));
+            Properties blitzProperties = new Properties();
+            File file = new File(servletContext.getRealPath(blitzPropertiesPath));
             if (file.exists()) {
                 InputStream in = null;
                 try {
                     in = new FileInputStream(file);
-                    roseProperties.load(in);
+                    blitzProperties.load(in);
                 } catch (IOException e) {
-                    throw new IllegalArgumentException(rosePropertiesPath, e);
+                    throw new IllegalArgumentException(blitzPropertiesPath, e);
                 } finally {
                     if (in != null) {
                         try {
@@ -94,11 +94,11 @@ public final class PrivateVar {
                         }
                     }
                 }
-                PrivateVar.roseProperties = roseProperties;
+                PrivateVar.blitzProperties = blitzProperties;
             } else {
-                PrivateVar.roseProperties = new Properties();
+                PrivateVar.blitzProperties = new Properties();
             }
         }
-        return roseProperties.getProperty(name, def);
+        return blitzProperties.getProperty(name, def);
     }
 }

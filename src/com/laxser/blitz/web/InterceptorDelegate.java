@@ -28,7 +28,9 @@ import com.laxser.blitz.web.impl.thread.AfterCompletion;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:38:38
+@contact [duqifan@gmail.com]
+@InterceptorDelegate.java
  * 
  */
 public class InterceptorDelegate implements Ordered, Named, ControllerInterceptor, AfterCompletion,

@@ -19,6 +19,7 @@ import org.apache.commons.logging.LogFactory;
 import org.json.JSONObject;
 import org.springframework.beans.factory.InitializingBean;
 
+import com.laxser.blitz.util.BasicCookieManager;
 import com.laxser.blitz.web.ControllerInterceptorAdapter;
 import com.laxser.blitz.web.Invocation;
 import com.laxser.blitz.web.annotation.Interceptor;
@@ -27,9 +28,10 @@ import com.laxser.blitz.web.annotation.Interceptor;
  * 清Cookie用的Interceptor,如果你需要使用，只用在对应的Controller上加Annotation
  * 
  * @see CookieCleaner
- * @author lookis (comic.liu@gmail.com)
- * @author tai.wang@opi-corp.com Sep 13, 2010 - 11:44:12 AM
- */
+ * @author laxser  Date 2012-4-8 下午5:30:11
+@contact [duqifan@gmail.com]
+@CookieCleanerInterceptor.java
+*/
 @Interceptor(oncePerRequest = true)
 public class CookieCleanerInterceptor extends ControllerInterceptorAdapter implements
         InitializingBean {
@@ -67,7 +69,7 @@ public class CookieCleanerInterceptor extends ControllerInterceptorAdapter imple
                     continue;
                 }
                 if (isUsed) {
-                    CookieManager.getInstance().clearCookie(inv.getResponse(), cookieName, 0,
+                    BasicCookieManager.getInstance().clearCookie(inv.getResponse(), cookieName, 0,
                             cookiePath);
                     if (logger.isDebugEnabled()) {
                         logger.debug("Clear Cookie:" + cookieName);
@@ -86,11 +88,7 @@ public class CookieCleanerInterceptor extends ControllerInterceptorAdapter imple
     public void afterPropertiesSet() throws Exception {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
         scheduledExecutorService.scheduleAtFixedRate(
-        /**
-         * reload <br>
-         * 
-         * @author tai.wang@opi-corp.com Sep 13, 2010 - 11:44:41 AM
-         */
+        
         new Runnable() {
 
             @Override

@@ -73,7 +73,10 @@ import com.laxser.blitz.web.portal.impl.PortalResolver;
  * 
  * <pre>
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-8 下午5:35:06
+@contact [duqifan@gmail.com]
+@WindowContainer.java
+
  * 
  */
 public interface WindowContainer {
@@ -87,12 +90,7 @@ public interface WindowContainer {
      */
     public Invocation getInvocation();
 
-    /**
-     * 请您调用: {@link #getInvocation()#addModel(String, Object)} 来完成
-     * 现在是2010-08-04，2010国庆后将去掉此代码
-     */
-    @Deprecated
-    public void addModel(String name, Object value);
+  
 
     /**
      * 返回创建此对象时的 {@link HttpServletRequest}对象，等价于

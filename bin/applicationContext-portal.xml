@@ -12,7 +12,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
 	default-lazy-init="true">
 
-	<!-- 两个Resolver以及一个Interceptor是Portal框架插入到Rose的接口实现 -->
+	<!-- 两个Resolver以及一个Interceptor是Portal框架插入到Blitz的接口实现 -->
 
 	<bean id="portalResolver" class="com.laxser.blitz.web.portal.impl.PortalResolver">
 		<property name="portalFactory" ref="portalFactory" />

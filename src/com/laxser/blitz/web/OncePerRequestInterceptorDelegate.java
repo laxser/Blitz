@@ -35,7 +35,7 @@ public class OncePerRequestInterceptorDelegate extends InterceptorDelegate {
     public OncePerRequestInterceptorDelegate(ControllerInterceptor interceptor) {
         super(interceptor);
         String realInterceptorName = getMostInnerInterceptor(interceptor).getClass().getName();
-        this.filteredKey = "$$paoding-rose.interceptor.oncePerRequest." + "." + realInterceptorName;
+        this.filteredKey = "$$blitz.interceptor.oncePerRequest." + "." + realInterceptorName;
     }
 
     @Override

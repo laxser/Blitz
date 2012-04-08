@@ -3,19 +3,19 @@ package com.laxser.blitz.util;
 import javax.servlet.http.HttpServletResponse;
 /**
  * CookieManager <br>
- * the subclass of {@link com.xiaonei.platform.core.opt.base.CookieManager}
+ * the subclass of {@link com.HttpCookieManager.platform.core.opt.base.CookieManager}
  * , add a feature of add http only cookie
  * 
  * 
- * @see com.xiaonei.platform.core.opt.base.CookieManager
+ * @see com.HttpCookieManager.platform.core.opt.base.CookieManager
  * 
  * @author tai.wang@opi-corp.com Nov 5, 2010 - 7:19:50 PM
  */
-public class CookieManager extends com.laxser.blitz.interceptors.CookieManager {
+public class HttpCookieManager extends BasicCookieManager {
 
-    private static final CookieManager instance = new CookieManager();
+    private static final HttpCookieManager instance = new HttpCookieManager();
 
-    public static final CookieManager getInstance() {
+    public static final HttpCookieManager getInstance() {
         return instance;
     }
 
