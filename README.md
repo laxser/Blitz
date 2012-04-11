@@ -11,11 +11,12 @@ Blitz 是一个开源的基于Servlet 规范和Spring规范的Restful响应框�
 ###How?
 
 在web.ini中加入以下代码
+
 ```xml
 <filter-name>blitzFilter</filter-name>
-  <filter-class>com.laxser.blitz.BlitzFilter</filter-class>
+   <filter-class>com.laxser.blitz.BlitzFilter</filter-class>
  </filter>
- <filter-mapping>
+  <filter-mapping>
   <filter-name>blitzFilter</filter-name>
   <url-pattern>/*</url-pattern>
   <dispatcher>REQUEST</dispatcher>
