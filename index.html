@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Blitz by laxser</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/laxser/Blitz">Fork On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/laxser/Blitz/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/laxser/Blitz/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Blitz</h1>
+          <p>A restful high performance light-weighted  java framework based on spring,</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/laxser">laxser</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>What is Blitz</h3>
+
+<p>Blitz is a <em>light-weighted</em> <em>restful</em> Framework based on <em>Spring Framework</em> and <em>Servlet</em>.You can use Blitz to build a site with MVC style easily and add restful features to it.</p>
+
+<h4>Why is the framwwork called Blitz?</h4>
+
+<p>Because,it can handler requests very fast and efficiently.</p>
+
+<p>Lama is a sub-project of Blitz.
+It is based on java's annotation feature.
+We use @ to mark a <em>DAO</em> and the Lama will autowire the interface.</p>
+
+<h4>why is it called <em>Lama</em>?</h4>
+
+<p>Because my girl friend like the animal = =.</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git init
+$ git clone git@github.com:laxser/Blitz.git
+
+</code></pre>
+
+<p>大功告成～</p>
+
+<h3>Quick Start</h3>
+
+<h4>How?</h4>
+
+<p>在web.ini中加入以下代码</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;filter-name&gt;</span>blitzFilter<span class="nt">&lt;/filter-name&gt;</span>
+   <span class="nt">&lt;filter-class&gt;</span>com.laxser.blitz.BlitzFilter<span class="nt">&lt;/filter-class&gt;</span>
+ <span class="nt">&lt;/filter&gt;</span>
+  <span class="nt">&lt;filter-mapping&gt;</span>
+  <span class="nt">&lt;filter-name&gt;</span>blitzFilter<span class="nt">&lt;/filter-name&gt;</span>
+  <span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+  <span class="nt">&lt;dispatcher&gt;</span>REQUEST<span class="nt">&lt;/dispatcher&gt;</span>
+  <span class="nt">&lt;dispatcher&gt;</span>FORWARD<span class="nt">&lt;/dispatcher&gt;</span>
+  <span class="nt">&lt;dispatcher&gt;</span>INCLUDE<span class="nt">&lt;/dispatcher&gt;</span>
+ <span class="nt">&lt;/filter-mapping&gt;</span>
+</pre>
+</div>
+
+
+<h3>A little bit further</h3>
+
+<h4>若要控制并发</h4>
+
+<div class="highlight">
+<pre><span class="nt">&lt;context-param&gt;</span>
+  <span class="nt">&lt;param-name&gt;</span>portalExecutorCorePoolSize<span class="nt">&lt;/param-name&gt;</span>
+  <span class="nt">&lt;param-value&gt;</span>200<span class="nt">&lt;/param-value&gt;</span>
+ <span class="nt">&lt;/context-param&gt;</span>
+
+</pre>
+</div>
+
+
+<h4>需要使用Log4j查看日志</h4>
+
+<div class="highlight">
+<pre><span class="nt">&lt;listener&gt;</span>
+  <span class="nt">&lt;listener-class&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="nt">&lt;/listener-class&gt;</span>
+ <span class="nt">&lt;/listener&gt;</span>
+</pre>
+</div>
+
+
+<h4>配置忽略Blitz 的模块的方法,在Blitz需要被忽略的模块中配置一个blitz-info.properties</h4>
+
+<pre><code>blitz.ignore=true
+</code></pre>
+
+<h3>现在 你已经轻松的完成了Blitz平台的搭建～</h3>
+
+<h3>Hello World</h3>
+
+<h4>1. 编写HelloWorldController 放在Controllers包下面</h4>
+
+<div class="highlight">
+<pre>
+<span class="kn">import</span> <span class="nn">com.laxser.blitz.web.Invocation</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.laxser.blitz.web.annotation.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.laxser.blitz.web.annotation.rest.Get</span><span class="o">;</span>
+
+
+
+<span class="nd">@Path</span><span class="o">(</span><span class="s">"helloworld"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FriendController</span>
+<span class="o">{</span>
+    <span class="nd">@Get</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sayHelloWorld</span><span class="o">(</span><span class="n">Invocation</span> <span class="n">inv</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="k">return</span> <span class="s">"@Hello world"</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre>
+</div>
+
+
+<p>然后，访问  http://localhost:8080/XXX/helloworld</p>
+
+<h3>Authors and Contributors</h3>
+
+<p>Blitz, also its DAO (Lama) was commited by @laxser.You may interested to go to his blog:<a>http://laxser.wordpress.com</a></p>
+
+<h3>Support or Contact</h3>
+
+<p>Blitz is absolutely <em>100% pure java and 100%</em> open-source with <em>No warranty</em>.
+ But you may contact <a href="https://github.com/laxser" class="user-mention">@laxser</a> (duqifan@gmail.com) for suggestions and etc. I will reply to you ASAP.
+please refer to the README for more information</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
