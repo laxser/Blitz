@@ -22,12 +22,13 @@ Blitz 是一个开源的基于Servlet 规范和Spring规范的Restful响应框�
   <dispatcher>FORWARD</dispatcher>
   <dispatcher>INCLUDE</dispatcher>
  </filter-mapping>
-
 ```
 
 ###A little bit further 
 
 ####若要控制并发
+
+
 ```xml
 <context-param>
   <param-name>portalExecutorCorePoolSize</param-name>
