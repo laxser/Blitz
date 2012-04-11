@@ -28,13 +28,13 @@ Blitz 是一个开源的基于Servlet 规范和Spring规范的Restful响应框�
 ###A little bit further 
 
 ####若要控制并发
-'''
+```xml
 <context-param>
   <param-name>portalExecutorCorePoolSize</param-name>
   <param-value>200</param-value>
  </context-param>
  
-'''
+```
 
 ####需要使用Log4j查看日志
 
