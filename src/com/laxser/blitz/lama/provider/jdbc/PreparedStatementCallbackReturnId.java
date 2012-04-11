@@ -65,7 +65,7 @@ public class PreparedStatementCallbackReturnId implements PreparedStatementCallb
         this.mapper = new SingleColumnRowMapper(idType);
         if (wrappedIdType != Integer.class && wrappedIdType != Long.class) {
             throw new IllegalArgumentException(
-                    "wrong return type(int/long type or its array type only): " + returnType);
+                    "Wrong return type(int/long type or its array type only): " + returnType);
         }
     }
 

@@ -99,8 +99,8 @@ public class JdbcDataAccess implements DataAccess {
     public int[] batchUpdate(String sql, Modifier modifier, List<Map<String, Object>> parametersList) {
         // 以com.xiaonei.in.dao为试点测试真正的批量插入、更新，不支持返回可能的自增主键
         // 2010-10-20
-        if (modifier.getDefinition().getDAOClazz().getName().startsWith("com.xiaonei.in.dao")//
-        		|| modifier.getDefinition().getDAOClazz().getName().startsWith("net.paoding.rose.jade.mock.dao")) {
+        if (
+        		modifier.getDefinition().getDAOClazz().getName().startsWith("com.laxser.blitz.lama.mock.dao")) {
             return batchUpdate2(sql, modifier, parametersList);
         } else {
             return batchUpdate1(sql, modifier, parametersList);

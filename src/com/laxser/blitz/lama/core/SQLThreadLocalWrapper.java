@@ -27,8 +27,9 @@ import com.laxser.blitz.lama.provider.Modifier;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * @author 廖涵 [in355hz@gmail.com]
+ * @author laxser  Date 2012-4-11 上午11:35:57
+@contact [duqifan@gmail.com]
+@SQLThreadLocalWrapper.java
  * 
  */
 

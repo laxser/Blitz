@@ -11,7 +11,10 @@ import org.springframework.util.ClassUtils;
 /**
  * 假的 {@link DataAccessProvider} 实现。
  * 
- * @author han.liao
+ *@author laxser  Date 2012-4-11 上午11:29:57
+@contact [duqifan@gmail.com]
+@DataAccessProviderMock.java
+
  */
 public class DataAccessProviderMock implements DataAccessProvider {
 

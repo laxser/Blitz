@@ -1,5 +1,6 @@
 package com.laxser.blitz.lama.datasource.instances;
 
+
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -15,7 +16,12 @@ import org.springframework.util.Assert;
 
 import com.laxser.blitz.lama.annotation.UseMaster;
 import com.laxser.blitz.lama.core.SQLThreadLocal;
-
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@renren-inc.com
+ * date: 2012-4-11
+ */
 public class MasterSlaverDataSource implements DataSource {
 
     private List<DataSource> masters = Collections.emptyList();

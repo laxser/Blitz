@@ -24,7 +24,7 @@ import com.laxser.blitz.lama.provider.DataAccessProvider;
 import com.laxser.blitz.lama.provider.cache.CacheDataAccess;
 
 /**
- * Jade提供的{@link com.laxser.blitz.lama.provider.DataAccessProvider}实现。
+ * Lama提供的{@link com.laxser.blitz.lama.provider.DataAccessProvider}实现。
  * 
  * <p>
  * 在Spring的XML配置中必须存在id为jada.dataAccessProvider的本对象实例。

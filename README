@@ -3,14 +3,40 @@ Blitz 是一个开源的基于Servlet 规范和Spring规范的Restful响应框�
 在web.ini中加入以下代码
 
 '''
-
+<filter-name>blitzFilter</filter-name>
+  <filter-class>com.laxser.blitz.BlitzFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>blitzFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  <dispatcher>REQUEST</dispatcher>
+  <dispatcher>FORWARD</dispatcher>
+  <dispatcher>INCLUDE</dispatcher>
+ </filter-mapping>
 
 '''
 
-配置忽略Blitz 的模块的方法
+若要控制并发
+'''
+<context-param>
+  <param-name>portalExecutorCorePoolSize</param-name>
+  <param-value>200</param-value>
+ </context-param>
+ 
+'''
+需要使用Log4j查看日志
+
+‘’‘
+<listener>
+  <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+ </listener>
+’‘’
+
+
+配置忽略Blitz 的模块的方法,在Blitz需要被忽略的模块中配置一个blitz-info.properties
 
 '''
-
+blitz.ignore=true
 '''
 
 

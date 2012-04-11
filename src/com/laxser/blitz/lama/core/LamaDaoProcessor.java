@@ -77,7 +77,7 @@ public class LamaDaoProcessor implements BeanFactoryPostProcessor, ApplicationCo
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)
             throws BeansException {
         if (logger.isInfoEnabled()) {
-            logger.info("[jade] starting ...");
+            logger.info("[lama] starting ...");
         }
         final List<ResourceRef> resources;
         try {
@@ -105,7 +105,7 @@ public class LamaDaoProcessor implements BeanFactoryPostProcessor, ApplicationCo
         }
 
         if (logger.isInfoEnabled()) {
-            logger.info("[jade] found " + urls.size() + " jade urls: " + urls);
+            logger.info("[lama] found " + urls.size() + " lama urls: " + urls);
         }
         if (urls.size() > 0) {
             LamaDaoComponentProvider provider = new LamaDaoComponentProvider(true);
@@ -121,11 +121,11 @@ public class LamaDaoProcessor implements BeanFactoryPostProcessor, ApplicationCo
 
             for (String url : urls) {
                 if (logger.isInfoEnabled()) {
-                    logger.info("[jade] call 'jade/find'");
+                    logger.info("[lama] call 'lama/find'");
                 }
                 Set<BeanDefinition> dfs = provider.findCandidateComponents(url);
                 if (logger.isInfoEnabled()) {
-                    logger.info("[jade] found " + dfs.size()//
+                    logger.info("[lama] found " + dfs.size()//
                             + " beanDefinition from '" + url + "'");
                 }
                 for (BeanDefinition beanDefinition : dfs) {
@@ -133,7 +133,7 @@ public class LamaDaoProcessor implements BeanFactoryPostProcessor, ApplicationCo
 
                     if (daoClassNames.contains(daoClassName)) {
                         if (logger.isDebugEnabled()) {
-                            logger.debug("[jade] ignored replicated jade dao class: "
+                            logger.debug("[lama] ignored replicated lama dao class: "
                                     + daoClassName + "  [" + url + "]");
                         }
                         continue;
@@ -151,18 +151,18 @@ public class LamaDaoProcessor implements BeanFactoryPostProcessor, ApplicationCo
                     defaultBeanFactory.registerBeanDefinition(daoClassName, beanDefinition);
 
                     if (logger.isDebugEnabled()) {
-                        logger.debug("[jade] register jade dao bean: " + daoClassName);
+                        logger.debug("[lama] register lama dao bean: " + daoClassName);
                     }
                 }
             }
         }
         if (logger.isInfoEnabled()) {
-            logger.info("[jade] exits");
+            logger.info("[lama] exits");
         }
     }
 
     protected DataAccessProvider createJdbcTemplateDataAccessProvider() {
-        return (DataAccessProvider) applicationContext.getBean("jada.dataAccessProvider",
+        return (DataAccessProvider) applicationContext.getBean("lama.dataAccessProvider",
                 DataAccessProvider.class);
     }
 }

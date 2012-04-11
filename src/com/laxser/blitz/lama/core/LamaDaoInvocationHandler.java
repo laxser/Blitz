@@ -79,7 +79,7 @@ public class LamaDaoInvocationHandler implements InvocationHandler {
                 return args[0] == proxy;
             }
             if (methodName.equals("clone")) {
-                throw new CloneNotSupportedException("clone is not supported for jade dao.");
+                throw new CloneNotSupportedException("clone is not supported for lama dao.");
             }
             throw new UnsupportedOperationException(definition.getDAOClazz().getName() + "#"
                     + method.getName());

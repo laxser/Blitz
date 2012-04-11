@@ -3,8 +3,10 @@ package com.laxser.blitz.lama.provider;
 /**
  * SQL语句编译填充参数后输出结果。
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * @author 廖涵 [in355hz@gmail.com]
+ *@author laxser  Date 2012-4-11 上午10:50:16
+@contact [duqifan@gmail.com]
+@SQLInterpreterResult.java
+
  * 
  */
 public interface SQLInterpreterResult {

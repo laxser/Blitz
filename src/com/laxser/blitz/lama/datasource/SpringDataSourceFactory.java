@@ -44,7 +44,7 @@ public class SpringDataSourceFactory implements DataSourceFactory, ApplicationCo
         if (dataSource != null) {
             return dataSource;
         }
-        dataSource = getDataSourceByKey(daoClass, "jade.dataSource");
+        dataSource = getDataSourceByKey(daoClass, "lama.dataSource");
         if (dataSource != null) {
             return dataSource;
         }
@@ -55,7 +55,7 @@ public class SpringDataSourceFactory implements DataSourceFactory, ApplicationCo
         String tempCatalog = catalog;
         DataSource dataSource;
         while (tempCatalog != null && tempCatalog.length() > 0) {
-            dataSource = getDataSourceByKey(daoClass, "jade.dataSource." + tempCatalog);
+            dataSource = getDataSourceByKey(daoClass, "lama.dataSource." + tempCatalog);
             if (dataSource != null) {
                 return dataSource;
             }
