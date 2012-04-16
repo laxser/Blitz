@@ -65,10 +65,10 @@ import com.laxser.blitz.web.annotation.rest.Get;
 
 
 
-@Path("helloworld")
+@Path("hello")
 public class FriendController
 {
-    @Get
+    @Get("world")
     public String sayHelloWorld(Invocation inv) {
     	
     	return "@Hello world";
@@ -76,7 +76,7 @@ public class FriendController
     
 }
 ```
-然后，访问  http://localhost:8080/XXX/helloworld
+然后，访问  http://localhost:8080/XXX/hello/world
 
 
 
