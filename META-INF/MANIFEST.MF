@@ -4,4 +4,6 @@ Built-By: Laxser
 Build-Jdk: 1.6.0_30
 Implementation-Title: blitz-lama
 Implementation-Version: 1.0.1-20120416
+blitz=controllers, applicationContext, messages
+rose=controllers, applicationContext, messages
 
