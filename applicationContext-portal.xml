@@ -38,10 +38,10 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 
 	<bean id="laziedPortalFactoryTaget" class="com.laxser.blitz.web.portal.impl.PortalFactoryImpl">
 		<property name="executorService" ref="executorService" />
-		<property name="portalListener" ref="windowListeners" />
+		<property name="windowListener" ref="windowListeners" />
 	</bean>
 
-	<bean id="portalExecutorService"
+	<bean id="executorService"
 		class="com.laxser.blitz.web.portal.impl.ThreadPoolExcutorServiceFactoryBean">
 		<property name="threadPoolTaskExecutor">
 			<bean id="portalExecutor"
@@ -49,12 +49,12 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 		</property>
 	</bean>
 
-	<bean id="portalListeners" class="com.laxser.blitz.web.portal.WindowListeners">
-		<property name="listeners" ref="portalListenerList" />
+	<bean id="windowListeners" class="com.laxser.blitz.web.portal.WindowListeners">
+		<property name="listeners" ref="windowListenerList" />
 	</bean>
 
 
-	<util:list id="portalListenerList">
+	<util:list id="windowListenerList">
 		<bean class="com.laxser.blitz.web.portal.WindowLoggerListener" />
 	</util:list>
 
