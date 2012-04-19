@@ -31,8 +31,7 @@ import java.util.concurrent.Future;
  * closed (not opened), the operation is timeout only by remote service and
  * never timeout if remote service returns never.
  * 
- * @author xylz(xylz@live.cn)
- * @since 2009-12-31
+ * 
  * @see ThreadLocal
  * @see Future
  */

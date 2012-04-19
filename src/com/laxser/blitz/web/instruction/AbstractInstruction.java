@@ -24,8 +24,11 @@ import com.laxser.blitz.web.Invocation;
 
 
 /**
- * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * 用于指挥render在渲染的具体过程中需要怎么进行，之前要做什么，之后要做什么
+ * @author laxser  Date 2012-4-12 上午10:24:18
+@contact [duqifan@gmail.com]
+@AbstractInstruction.java
+
  * 
  */
 public abstract class AbstractInstruction implements Instruction {

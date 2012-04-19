@@ -23,8 +23,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * @author Li Weibo[weibo.leo@gmail.com]
+ * @author laxser  Date 2012-4-12 上午10:26:54
+@contact [duqifan@gmail.com]
+@HttpErrorInstruction.java
+* HTTP 错误指令的帮助
  */
 public class HttpErrorInstruction extends AbstractInstruction {
 

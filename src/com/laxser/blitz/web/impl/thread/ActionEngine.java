@@ -162,7 +162,7 @@ public final class ActionEngine implements Engine {
 
             ControllerInterceptor most = InterceptorDelegate.getMostInnerInterceptor(interceptor);
 
-            if (!most.getClass().getName().startsWith("net.paoding.blitz.web")) {
+            if (!most.getClass().getName().startsWith("com.laxser.blitz.web")) {
 
                 // 获取@Intercepted注解 (@Intercepted注解配置于控制器或其方法中，决定一个拦截器是否应该拦截之。没有配置按“需要”处理)
                 Intercepted intercepted = method.getAnnotation(Intercepted.class);
@@ -404,7 +404,6 @@ public final class ActionEngine implements Engine {
 
         // creates parameter binding result (not bean, just simple type, like int, Integer, int[] ...
         ParameterBindingResult paramBindingResult = new ParameterBindingResult(inv);
-        logger.info("inv 来了");
         logger.info(MODEL_KEY_PREFIX);
         String paramBindingResultName = MODEL_KEY_PREFIX + paramBindingResult.getObjectName();
         

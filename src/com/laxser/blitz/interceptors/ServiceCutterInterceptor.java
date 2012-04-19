@@ -18,6 +18,7 @@ import com.laxser.blitz.util.BlockService.Cutter;
 import com.laxser.blitz.util.ConfigCenter;
 import com.laxser.blitz.web.ControllerInterceptorAdapter;
 import com.laxser.blitz.web.Invocation;
+import com.laxser.blitz.web.annotation.ServiceCutter;
 
 /**
  * service cutting implementation.

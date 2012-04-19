@@ -26,7 +26,12 @@ import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.context.ApplicationContext;
 
 /**
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * 
+ * Spring相关的是实用类
+ * @author laxser  Date 2012-4-12 上午10:00:08
+@contact [duqifan@gmail.com]
+@SpringUtils.java
+
  */
 public class SpringUtils {
 

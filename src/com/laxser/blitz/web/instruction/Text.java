@@ -17,22 +17,25 @@ package com.laxser.blitz.web.instruction;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * 
+ * @author laxser Date 2012-4-12 上午10:38:22
+ * @contact [duqifan@gmail.com]
+ * @Text.java
  */
-public class Text implements InstructionHelper {
+public class Text implements InstructionHelper
+{
 
-    public static TextInstruction text(Object value) {
-        TextInstruction instruction = new TextInstruction();
-        String text = (value == null) ? "" : value.toString();
-        if (text.length() > 0) {
-            if (!(value instanceof CharSequence)) {
-                if (value.getClass().getName().equalsIgnoreCase("JSONObject")) {
-                    text = "json:" + text;
-                }
-            }
-        }
-        instruction.text(text);
-        return instruction;
-    }
+	public static TextInstruction text(Object value)
+	{
+		TextInstruction instruction = new TextInstruction();
+		String text = (value == null) ? "" : value.toString();
+		if (text.length() > 0) {
+			if (!(value instanceof CharSequence)) {
+				if (value.getClass().getName().equalsIgnoreCase("JSONObject")) {
+					text = "json:" + text;
+				}
+			}
+		}
+		instruction.text(text);
+		return instruction;
+	}
 }

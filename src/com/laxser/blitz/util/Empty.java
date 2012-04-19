@@ -17,7 +17,10 @@ package com.laxser.blitz.util;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-12 上午10:03:23
+@contact [duqifan@gmail.com]
+@Empty.java
+
  * 
  */
 public class Empty {

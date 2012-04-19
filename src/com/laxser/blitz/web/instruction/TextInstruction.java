@@ -30,7 +30,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-12 上午10:39:32
+@contact [duqifan@gmail.com]
+@TextInstruction.java
+
  * 
  */
 public class TextInstruction extends AbstractInstruction {

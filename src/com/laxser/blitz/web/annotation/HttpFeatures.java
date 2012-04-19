@@ -22,7 +22,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 
+ * 标注这个类，用来告知被标注对象使用什么样的字符集和ContentType返回
  * @author laxser  Date 2012-4-5 下午3:03:56
 @contact [duqifan@gmail.com]
 @HttpFeatures.java

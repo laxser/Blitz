@@ -19,7 +19,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-12 上午10:28:00
+@contact [duqifan@gmail.com]
+@InstructionExecutor.java
+指令执行器，用来接收不同指令并且执行
  * 
  */
 public interface InstructionExecutor {

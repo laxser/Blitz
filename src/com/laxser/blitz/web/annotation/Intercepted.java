@@ -29,7 +29,7 @@ import com.laxser.blitz.web.ControllerInterceptor;
 
 /**
  * {@link Intercepted}用于配合{@link ControllerInterceptor}
- * 使用，指示Rose是否对所要分派的控制器(controller)及其方法(action)进行某些拦截器。
+ * 使用，指示Blitz是否对所要分派的控制器(controller)及其方法(action)进行某些拦截器。
  * <p>
  * {@link Intercepted}已经标注为@Inherited，即：如果子类@Intercepted的话，将使用父类的，以此类推。
  * 
@@ -43,12 +43,12 @@ import com.laxser.blitz.web.ControllerInterceptor;
  * allow和deny里面的字符串表示的是相关拦截器在applicationContext中的id或name。
  * <p>
  * 对拦截器本身是和controller在相同的package中的一些规定： <br>
- * Rose会自动把它们放到module中来，它们的id则为它们的类名(首字母改小写)或者去掉最后"Interceptor"后留下的名字(
+ * Blitz会自动把它们放到module中来，它们的id则为它们的类名(首字母改小写)或者去掉最后"Interceptor"后留下的名字(
  * 同样首字母也要变为小写)。 当然，如果这些{@link ControllerInterceptor}配置了{@link Component}，
  * 则按照Comonent的规定定义它们的id
  * 
  * 开发者可以将{@link Intercepted} 配置在Controller级别上，也可以配置在某个具体的方法级别上。
- * Rose优先找方法声明的Intercepted标注，然后再是类的标注。
+ * Blitz优先找方法声明的Intercepted标注，然后再是类的标注。
  * <p>
  * 
  * <strong>扩展</strong>

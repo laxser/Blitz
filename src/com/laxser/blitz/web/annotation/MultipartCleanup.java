@@ -22,7 +22,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 
+ * 多段清除，分为controller inv结束之后已经req 完成之后的两种情况
  * @author laxser  Date 2012-4-5 下午3:05:50
 @contact [duqifan@gmail.com]
 @MultipartCleanup.java

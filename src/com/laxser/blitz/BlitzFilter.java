@@ -43,7 +43,7 @@ import com.laxser.blitz.scanner.ModuleResourceProvider;
 import com.laxser.blitz.scanner.ModuleResourceProviderImpl;
 import com.laxser.blitz.scanning.LoadScope;
 import com.laxser.blitz.scanning.context.BlitzWebAppContext;
-import com.laxser.blitz.util.PrinteHelper;
+import com.laxser.blitz.util.PrinterHelper;
 import com.laxser.blitz.web.RequestPath;
 import com.laxser.blitz.web.annotation.ReqMethod;
 import com.laxser.blitz.web.impl.mapping.ConstantMapping;
@@ -570,8 +570,8 @@ public class BlitzFilter extends GenericFilterBean {
 
     private void printBlitzInfos() {
         if (logger.isDebugEnabled()) {
-            logger.debug(PrinteHelper.dumpModules(modules));
-            logger.debug("Mapping tree:\n" + PrinteHelper.list(mappingTree));
+            logger.debug(PrinterHelper.dumpModules(modules));
+            logger.debug("Mapping tree:\n" + PrinterHelper.list(mappingTree));
         }
 
         String msg = String.format("[init] Blitz initialized, %s modules loaded! (version=%s)",

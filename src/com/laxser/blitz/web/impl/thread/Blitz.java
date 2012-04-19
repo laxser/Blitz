@@ -107,7 +107,7 @@ public class Blitz implements EngineChain {
      */
     public boolean start() throws Throwable {
         if (this.started) {
-            throw new IllegalStateException("don't start again");
+            throw new IllegalStateException("An Instance has Started. Don't start again");
         }
         this.started = true;
         return innerStart();
@@ -131,7 +131,7 @@ public class Blitz implements EngineChain {
         if (matchResults == null) {
             // not blitz uri
             if (debugEnabled) {
-                logger.debug("not blitz uri: '" + this.path.getUri() + "'");
+                logger.debug("is not a blitz uri: '" + this.path.getUri() + "'");
             }
             return false;
         }
@@ -141,7 +141,7 @@ public class Blitz implements EngineChain {
         if (leafEngineGroup.size() == 0) {
             // not blitz uri
             if (debugEnabled) {
-                logger.debug("not blitz uri, not exits leaf engines for it: '" + this.path.getUri()
+                logger.debug("is not a blitz uri, not exits leaf engines for it: '" + this.path.getUri()
                         + "'");
             }
             return false;

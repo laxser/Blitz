@@ -20,7 +20,6 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.util.Assert;
@@ -30,102 +29,123 @@ import com.laxser.blitz.web.RequestPath;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser Date 2012-4-12 上午10:38:00
+ * @contact [duqifan@gmail.com]
+ * @RedirectInstruction.java
  * 
  */
-public class RedirectInstruction extends AbstractInstruction {
+public class RedirectInstruction extends AbstractInstruction
+{
 
-    protected static Log logger = LogFactory.getLog(RedirectInstruction.class);
+	protected static Log logger = LogFactory.getLog(RedirectInstruction.class);
 
-    @Override
-    public void doRender(Invocation inv) throws IOException {
-        String location = resolvePlaceHolder(location(), inv);
-        if (sc == null || sc == 302) {
-            inv.getResponse().sendRedirect(location);
-        } else {
-            Assert.isTrue(sc == HttpServletResponse.SC_MOVED_PERMANENTLY);
-            inv.getResponse().setStatus(sc);
-            inv.getResponse().setHeader("Location", location);
-        }
-    }
+	@Override
+	public void doRender(Invocation inv) throws IOException
+	{
+		String location = resolvePlaceHolder(location(), inv);
+		if (sc == null || sc == 302) {
+			inv.getResponse().sendRedirect(location);
+		}
+		else {
+			Assert.isTrue(sc == HttpServletResponse.SC_MOVED_PERMANENTLY);
+			inv.getResponse().setStatus(sc);
+			inv.getResponse().setHeader("Location", location);
+		}
+	}
 
-    // ----------------------------------------
+	// ----------------------------------------
 
-    private String location;
+	private String location;
 
-    private Integer sc;
+	private Integer sc;
 
-    /**
-     * 设置301永久跳转
-     * 
-     * @return
-     */
-    public RedirectInstruction permanently() {
-        this.sc = HttpServletResponse.SC_MOVED_PERMANENTLY;
-        return this;
-    }
+	/**
+	 * 设置301永久跳转
+	 * 
+	 * @return
+	 */
+	public RedirectInstruction permanently()
+	{
+		this.sc = HttpServletResponse.SC_MOVED_PERMANENTLY;
+		return this;
+	}
 
-    public RedirectInstruction module(final String module) {
-        this.preInstruction = new Instruction() {
+	public RedirectInstruction module(final String module)
+	{
+		this.preInstruction = new Instruction() {
 
-            @Override
-            public void render(Invocation inv) throws IOException, ServletException, Exception {
-                String ctxpath = inv.getRequestPath().getCtxpath();
-                if (module.length() == 0) {
-                    if (ctxpath.length() == 0) {
-                        location("/");
-                    } else {
-                        location(ctxpath);
-                    }
-                } else if (module.charAt(0) != '/') {
-                    location(ctxpath + "/" + module);
-                } else {
-                    location(ctxpath + module);
-                }
-            }
-        };
-        return this;
-    }
+			@Override
+			public void render(Invocation inv) throws IOException,
+					ServletException, Exception
+			{
+				String ctxpath = inv.getRequestPath().getCtxpath();
+				if (module.length() == 0) {
+					if (ctxpath.length() == 0) {
+						location("/");
+					}
+					else {
+						location(ctxpath);
+					}
+				}
+				else if (module.charAt(0) != '/') {
+					location(ctxpath + "/" + module);
+				}
+				else {
+					location(ctxpath + module);
+				}
+			}
+		};
+		return this;
+	}
 
-    public RedirectInstruction controller(final String controller) {
-        this.preInstruction = new Instruction() {
+	public RedirectInstruction controller(final String controller)
+	{
+		this.preInstruction = new Instruction() {
 
-            @Override
-            public void render(Invocation inv) throws IOException, ServletException, Exception {
-                String controllerPath = controller;
-                if (controller.length() > 0 && controller.charAt(0) != '/') {
-                    controllerPath = "/" + controller;
-                }
-                RequestPath requestPath = inv.getRequestPath();
-                location(requestPath.getCtxpath() + requestPath.getModulePath() + controllerPath);
-            }
-        };
-        return this;
-    }
+			@Override
+			public void render(Invocation inv) throws IOException,
+					ServletException, Exception
+			{
+				String controllerPath = controller;
+				if (controller.length() > 0 && controller.charAt(0) != '/') {
+					controllerPath = "/" + controller;
+				}
+				RequestPath requestPath = inv.getRequestPath();
+				location(requestPath.getCtxpath() + requestPath.getModulePath()
+						+ controllerPath);
+			}
+		};
+		return this;
+	}
 
-    public RedirectInstruction action(final String action) {
-        this.preInstruction = new Instruction() {
+	public RedirectInstruction action(final String action)
+	{
+		this.preInstruction = new Instruction() {
 
-            @Override
-            public void render(Invocation inv) throws IOException, ServletException, Exception {
-                String actionPath = action;
-                if (action.length() > 0 && action.charAt(0) != '/') {
-                    actionPath = "/" + action;
-                }
-                RequestPath requestPath = inv.getRequestPath();
-                location(requestPath.getCtxpath() + requestPath.getModulePath()
-                        + requestPath.getControllerPath() + actionPath);
-            }
-        };
-        return this;
-    }
+			@Override
+			public void render(Invocation inv) throws IOException,
+					ServletException, Exception
+			{
+				String actionPath = action;
+				if (action.length() > 0 && action.charAt(0) != '/') {
+					actionPath = "/" + action;
+				}
+				RequestPath requestPath = inv.getRequestPath();
+				location(requestPath.getCtxpath() + requestPath.getModulePath()
+						+ requestPath.getControllerPath() + actionPath);
+			}
+		};
+		return this;
+	}
 
-    public String location() {
-        return location;
-    }
+	public String location()
+	{
+		return location;
+	}
 
-    public RedirectInstruction location(String location) {
-        this.location = location;
-        return this;
-    }
+	public RedirectInstruction location(String location)
+	{
+		this.location = location;
+		return this;
+	}
 }

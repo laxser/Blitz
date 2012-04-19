@@ -17,6 +17,14 @@ package com.laxser.blitz.util;
 
 import org.apache.commons.lang.StringUtils;
 
+
+
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@gmail.com
+ * date: 2012-4-12
+ */
 public class BlitzStringUtil {
 
     public static String relativePathToModulePath(String relativePath) {

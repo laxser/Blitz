@@ -32,7 +32,7 @@ import com.laxser.blitz.scanning.ResourceRef;
 import com.laxser.blitz.scanning.BlitzScanner;
 
 /**
- * 用于配置Blitz自身的applicationContext
+ * 用于配置Blitz自身的applicationContext，并且装载
  * @author laxser  Date 2012-3-23 下午3:11:49
 @contact [duqifan@gmail.com]
 @BlitzResources.java
@@ -86,11 +86,13 @@ public class BlitzResources {
                 List<Resource> asList = Arrays.asList(founds);
                 ctxResources.addAll(asList);
                 if (logger.isDebugEnabled()) {
+                	logger.debug("找到Blitz资源定义");
                     logger.debug("[applicationContext] found applicationContext resources ("
                             + index + "/" + resources.size() + ": " + asList);
                 }
             } else {
                 if (logger.isDebugEnabled()) {
+                	logger.debug("没有找到Blitz的定义");
                     logger.debug("[applicationContext] ignored bacause not marked as"
                             + " 'blitz:applicationContext' or 'blitz:*'  (" + index + "/"
                             + resources.size() + ": " + ref);
@@ -98,6 +100,7 @@ public class BlitzResources {
             }
         }
         if (logger.isInfoEnabled()) {
+            logger.info("下面打印所有找到的applicationContext文件");
             logger.info("[applicationContext] FOUND " + ctxResources.size()
                     + " applcationContext files: " + ctxResources);
         }

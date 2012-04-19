@@ -1,4 +1,4 @@
-package com.laxser.blitz.advancedinterceptor;
+package com.laxser.blitz.interceptors;
 
 import java.lang.annotation.Annotation;
 import java.net.URL;

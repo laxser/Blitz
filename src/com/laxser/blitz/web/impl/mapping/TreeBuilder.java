@@ -25,7 +25,7 @@ import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.laxser.blitz.util.PrinteHelper;
+import com.laxser.blitz.util.PrinterHelper;
 import com.laxser.blitz.web.annotation.ReqMethod;
 import com.laxser.blitz.web.impl.module.ControllerRef;
 import com.laxser.blitz.web.impl.module.MethodRef;
@@ -174,7 +174,7 @@ public class TreeBuilder {
                     logger.error("mapping conflicts: '" + child.getMapping().getDefinition()
                             + "' conflicts with '" + sibling.getMapping().getDefinition()
                             + "' in '" + prefix + "'; here is the mapping tree, "
-                            + "you can find the conflict in it:\n" + PrinteHelper.list(tree));
+                            + "you can find the conflict in it:\n" + PrinterHelper.list(tree));
                     throw new IllegalArgumentException("mapping conflicts: '"
                             + child.getMapping().getDefinition() + "' conflicts with '"
                             + sibling.getMapping().getDefinition() + "' in '" + prefix + "'");

@@ -7,9 +7,11 @@ import javax.servlet.http.HttpServletResponse;
  * , add a feature of add http only cookie
  * 
  * 
- * @see com.HttpCookieManager.platform.core.opt.base.CookieManager
  * 
- * @author tai.wang@opi-corp.com Nov 5, 2010 - 7:19:50 PM
+ * 
+ *@author laxser  Date 2012-4-12 上午10:02:24
+@contact [duqifan@gmail.com]
+@HttpCookieManager.java
  */
 public class HttpCookieManager extends BasicCookieManager {
 

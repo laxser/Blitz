@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * cookie管理类
+ * HTTPCookieManager 用来继承这个基类使用并且完善这个功能，建议使用HttpCookieManger
  * @author laxser  Date 2012-4-8 下午4:15:20
 @contact [duqifan@gmail.com]
 @BasicCookieManager.java

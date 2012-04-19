@@ -33,11 +33,11 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
 
 
 /**
- * 
+ * 打印Blitz模块基本信息部分的辅助类
  * @see BlitzFilter
  * 
  */
-public class PrinteHelper {
+public class PrinterHelper {
 
     // 后续可以提取出来放到什么地方，是不是采用模板语言来定义?
     public static String dumpModules(List<Module> modules) {

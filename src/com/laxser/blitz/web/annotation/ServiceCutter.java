@@ -2,7 +2,7 @@
  * $Id: ServiceCutter.java 27494 2010-08-11 06:19:37Z yan.liu@XIAONEI.OPI.COM $
  * Copyright 2009-2010 Oak Pacific Interactive. All right reserved.
  */
-package com.laxser.blitz.interceptors;
+package com.laxser.blitz.web.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

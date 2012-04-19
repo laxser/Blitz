@@ -5,6 +5,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+
+
+
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@gmail.com
+ * date: 2012-4-12
+ */
 public class DateTimeUtil {
 	public final static int TIME_DAY_MILLISECOND = 86400000;
 	// /

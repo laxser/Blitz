@@ -16,8 +16,11 @@
 package com.laxser.blitz.web.instruction;
 
 /**
- * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * Forward的相关操作的指示
+ * @author laxser  Date 2012-4-12 上午10:25:08
+@contact [duqifan@gmail.com]
+@Forward.java
+
  * 
  */
 public class Forward implements InstructionHelper {

@@ -57,7 +57,11 @@ public class BlitzAppContext extends AbstractXmlApplicationContext {
 
     public BlitzAppContext(LoadScope scope, boolean refresh) {
         this.scopeValues = scope.getScope("applicationContext");
-        logger.info("create a BlitzAppContext, with scope='" + scope + "'");
+        if(logger.isInfoEnabled())
+        {
+        	logger.info("创建一个BlitzAppcontext");
+        	logger.info("create a BlitzAppContext, with scope='" + scope + "'");
+        }
         if (refresh) {
             refresh();
         }
@@ -93,7 +97,9 @@ public class BlitzAppContext extends AbstractXmlApplicationContext {
         super.prepareBeanFactory(beanFactory);
     }
 
-    /** Blitz对BeanFactory的特殊处理，必要时可以覆盖这个方法去掉Blitz的特有的处理 */
+    /** Blitz对BeanFactory的特殊处理，必要时可以覆盖这个方法去掉Blitz的特有的处理 
+     * Blitz会使用Lama去自动生成DAO 的相应Bean配置，因此若有DAO特性不包含Lama的话会爆出NotBeanDefException
+     */
     protected void prepareBeanFactoryByBlitz(ConfigurableListableBeanFactory beanFactory) {
         BeanDefinitionRegistry registry = (BeanDefinitionRegistry) beanFactory;
         AnnotationConfigUtils.registerAnnotationConfigProcessors(registry);

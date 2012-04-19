@@ -6,8 +6,9 @@ import org.apache.commons.logging.LogFactory;
 /**
  * logging something for debuging or analyzing in the future
  * 
- * @author xylz (xylz@live.cn)
- * @since 20090901
+ * @author laxser  Date 2012-4-12 上午9:58:38
+@contact [duqifan@gmail.com]
+@TimeCostUtil.java
  */
 public class TimeCostUtil {
 
@@ -129,8 +130,6 @@ public class TimeCostUtil {
      * @param log the logger
      * @param t the exception object
      * @param message the message
-     * @author xylz(xylz@live.cn)
-     * @since 20090924
      * @see {@link Log#isDebugEnabled()}
      */
     public static final void logError(Log log, Throwable t, String message) {

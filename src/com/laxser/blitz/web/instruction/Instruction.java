@@ -24,7 +24,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author zhiliang.wang
+ * @author laxser  Date 2012-4-12 上午10:27:27
+@contact [duqifan@gmail.com]
+@Instruction.java
+* 指令抽象接口
  * 
  */
 public interface Instruction {

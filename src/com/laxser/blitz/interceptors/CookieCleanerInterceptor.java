@@ -22,6 +22,7 @@ import org.springframework.beans.factory.InitializingBean;
 import com.laxser.blitz.util.BasicCookieManager;
 import com.laxser.blitz.web.ControllerInterceptorAdapter;
 import com.laxser.blitz.web.Invocation;
+import com.laxser.blitz.web.annotation.CookieCleaner;
 import com.laxser.blitz.web.annotation.Interceptor;
 
 /**

@@ -30,7 +30,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author zhiliang.wang
+ * @author laxser  Date 2012-4-12 上午10:27:12
+@contact [duqifan@gmail.com]
+@InputStreamInstruction.java
+输入流
  * 
  */
 public class InputStreamInstruction extends AbstractInstruction {

@@ -10,6 +10,8 @@ import org.apache.commons.logging.LogFactory;
 /**
  * 对栈进行简化的工具，去掉递归调用时循环出现的那部分栈。
  * 
+ * 这样做的好处很明显，你能更快的定位错误
+ * 
  * @author Li Weibo[weibo.leo@gmail.com]
  */
 public class StackTraceSimplifier {

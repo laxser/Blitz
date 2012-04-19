@@ -17,7 +17,10 @@ package com.laxser.blitz.web.instruction;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-12 上午10:26:27
+@contact [duqifan@gmail.com]
+@HttpError.java
+HTTP错误的帮助
  * 
  */
 

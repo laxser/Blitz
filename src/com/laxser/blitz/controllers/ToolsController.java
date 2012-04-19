@@ -47,6 +47,7 @@ import com.laxser.blitz.web.impl.thread.Blitz;
 /**
  * 这个Blitz内置的Controller是用来给用户显示Blitz当前配置信息的，可以方便的使用在调试者模式。
  * 若部署上线我们便可以通过配置隐藏这个功能
+ * 一般来说访问的uri应该是  /blitz-info/
  * @author laxser  Date 2012-3-23 下午3:49:23
 @contact [duqifan@gmail.com]
 @ToolsController.java
@@ -144,7 +145,7 @@ public class ToolsController {
                 }
 
                 // true: don't forward to next filter or servlet
-                return "@405: allowed=" + allow.toString();
+                return "@405: Allowed=" + allow.toString();
             }
         }
 

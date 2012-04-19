@@ -39,8 +39,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * Using  {@link java.util.UUID} to avoid repetition of the key.
  * <b>For example:homeaction_68a3c046-745d-4824-8915-3d5d29d93c19 or homeaction_68a3c046745d482489153d5d29d93c19</b>
  * </pre>
- * @author xylz (<a href="mailto:xylz@live.cn">xylz@live.cn</a>)
- * @since 20090901
+ * @author laxser  Date 2012-4-12 上午10:04:09
+@contact [duqifan@gmail.com]
+@ConfigCenter.java
  */
 public final class ConfigCenter {
 
@@ -219,7 +220,7 @@ public final class ConfigCenter {
      * 
      * @param key the key
      * @throws IllegalArgumentException if the key is null
-     * @since 20090909
+     *
      */
     public static void removeString(String key) {
         checkKey(key);
@@ -231,7 +232,7 @@ public final class ConfigCenter {
      * 
      * @param key the key
      * @throws IllegalArgumentException if the key is null
-     * @since 20090909
+     * 
      */
     public static void removeInteger(String key) {
         checkKey(key);
@@ -243,7 +244,7 @@ public final class ConfigCenter {
      * 
      * @param key the key
      * @throws IllegalArgumentException if the key is null
-     * @since 20090909
+     * 
      */
     public static void removeBoolean(String key) {
         checkKey(key);

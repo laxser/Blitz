@@ -25,7 +25,10 @@ import com.laxser.blitz.web.RequestPath;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ *@author laxser  Date 2012-4-12 上午10:25:37
+@contact [duqifan@gmail.com]
+@ForwardInstruction.java
+Forward 指令操作
  * 
  */
 public class ForwardInstruction extends AbstractInstruction {
