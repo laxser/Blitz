@@ -44,7 +44,7 @@ import com.laxser.blitz.scanning.ResourceRef;
 import com.laxser.blitz.scanning.BlitzScanner;
 
 /**
- * Jade核心处理器，启动入口。<br/>
+ * Lama核心处理器，启动入口。<br/>
  * 扫描jar和classes得到DAO类，并注册DAO到spring容器中。
  * 
  * @author laxser  Date 2012-3-22 下午3:43:28

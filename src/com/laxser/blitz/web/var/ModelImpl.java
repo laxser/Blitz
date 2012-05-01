@@ -60,7 +60,7 @@ public class ModelImpl implements Model {
             while (iterator.hasNext()) {
                 final Map.Entry<String, Object> entry = iterator.next();
                 final String key = entry.getKey();
-                if (key != null && !key.startsWith("$$paoding-rose")) {
+                if (key != null && !key.startsWith("$$blitz")) {
                     cloneAndFiltered.put(key, entry.getValue());
                 }
             }

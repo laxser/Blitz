@@ -17,7 +17,10 @@ package com.laxser.blitz.web.portal;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-22 下午4:35:59
+@contact [duqifan@gmail.com]
+@WindowCallback.java
+
  *
  */
 public interface WindowCallback {

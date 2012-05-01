@@ -70,11 +70,11 @@ import com.laxser.blitz.web.var.Model;
  * </ul>
  * <p>
  * 
- * WIKI上的说明 <a href=
- * "http://code.google.com/p/paoding-blitz/wiki/Blitz_Guide_Invocation"
- * >http://code.google.com/p/paoding-blitz/wiki/Blitz_Guide_Invocation</a>
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-4-22 下午4:09:59
+@contact [duqifan@gmail.com]
+@Invocation.java
+
  * 
  */
 public interface Invocation {

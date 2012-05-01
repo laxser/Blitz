@@ -53,7 +53,7 @@ public class MasterSlaverDataSource implements DataSource {
 
     protected DataSource getDataSource() throws SQLException {
         SQLThreadLocal local = SQLThreadLocal.get();
-        Assert.notNull(local, "this is jade's bug; class SQLThreadLocalWrapper "
+        Assert.notNull(local, "this is lama's bug; class SQLThreadLocalWrapper "
                 + "should override all the DataAccess interface methods.");
         boolean write = false;
         if (local.isWriteType()) {

@@ -44,19 +44,19 @@ import com.laxser.blitz.web.portal.impl.PortalResolver;
  * </pre>
  * <p>
  * 
- * <strong>*rose和portal/pipe的关系*</strong>
+ * <strong>*blitz和portal/pipe的关系*</strong>
  * 
  * <pre>
- * 1、rose是一个应用于web开发框架，portal/pipe不是rose的核心，只是rose的一个插件；
- * 2、如果你不需要portal/pipe特性时，您可以把paoding-rose-portal的jar包移走，而不会影响普通rose程序；
- * 3、portal/pipe使用rose开放出来的spring“配置文件”插入到rose框架中，使得portal/pipe可以在rose的程序中使用；
+ * 1、blitz是一个应用于web开发框架，portal/pipe不是blitz的核心，只是blitz的一个插件；
+ * 2、如果你不需要portal/pipe特性时，您可以把paoding-blitz-portal的jar包移走，而不会影响普通blitz程序；
+ * 3、portal/pipe使用blitz开放出来的spring“配置文件”插入到blitz框架中，使得portal/pipe可以在blitz的程序中使用；
  * </pre>
  * 
  * <strong>*portal/pipe的创建*</strong>
  * 
  * <pre>
  * 1、portal/pipe参数由框架完成创建，你只需要将Portal声明为方法的参数即可；
- * 2、rose框架提供了 {@link ParamResolver}接口，portal/pipe提供了该接口的实现 {@link PortalResolver} / {@link PipeResolver}，并配置到 jar 包中的 applicatonContext*.xml，使得rose框架能够识别
+ * 2、blitz框架提供了 {@link ParamResolver}接口，portal/pipe提供了该接口的实现 {@link PortalResolver} / {@link PipeResolver}，并配置到 jar 包中的 applicatonContext*.xml，使得blitz框架能够识别
  * 3、对于portal，虽然一个portal参数的生命周期直到页面渲染结束来完成，但如果您在多个控制器方法中声明Portal参数，请求在这些方法之间转发，这些Portal是不同的对象。
  * 4、对于pipe，一次用户请求可以在多个控制器方法之间转发，但在整个转发链条中只能存现一次pipe参数；
  * </pre>
@@ -114,7 +114,7 @@ public interface WindowContainer {
      * <p>
      * 如果没有设置窗口渲染器：<br>
      * portal会将window的内容原封不动地输出到portal页面的指定位置中；<br>
-     * pipe则会将窗口的内容转化为符合rosepipe.js规范的一个script串
+     * pipe则会将窗口的内容转化为符合blitzpipe.js规范的一个script串
      * 
      * @param render
      */
