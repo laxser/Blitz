@@ -53,9 +53,9 @@ import com.laxser.blitz.web.ControllerInterceptor;
  * 
  * <strong>扩展</strong>
  * <p>
- * 可以在每个module目录下的rose.properties写intercepted.allow和intercepted.
+ * 可以在每个module目录下的blitz.properties写intercepted.allow和intercepted.
  * deny属性配置该module的拦截器可见范围，使得该module下的控制器只能在这些可见的拦截下进行更进一步的选择。<br>
- * rose.properties的这个特性不作用子module
+ * blitz.properties的这个特性不作用子module
  * 
  * @author laxser  Date 2012-4-5 下午3:05:00
 @contact [duqifan@gmail.com]
