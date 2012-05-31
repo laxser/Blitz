@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 
 /**
  * 用{@link SQLParam} 注解标注DAO方法的参数，指定参数的名称，使得可以在SQL中通过":参数名"的方式使用它。
- * Jade通过PreparedStatment动态地把参数值提交给数据库执行。
+ * Lama通过PreparedStatment动态地把参数值提交给数据库执行。
  * <p>
  * 
  * <span style='margin-left:50px;'>

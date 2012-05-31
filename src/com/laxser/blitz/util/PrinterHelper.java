@@ -35,7 +35,10 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
 /**
  * 打印Blitz模块基本信息部分的辅助类
  * @see BlitzFilter
- * 
+ * @author laxser  Date 2012-5-30 下午4:53:57
+@contact [duqifan@gmail.com]
+@PrinterHelper.java
+
  */
 public class PrinterHelper {
 

@@ -25,7 +25,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 /**
- * 
+ * 标注这个将可以自定义数据库返回的结果映射到相应的列上去。
 *@author laxser  Date 2012-3-22 下午3:36:47
 @contact [duqifan@gmail.com]
 @RowHandler.java

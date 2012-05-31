@@ -51,8 +51,10 @@ import com.laxser.blitz.web.impl.module.Module;
  * {@link ModuleEngine}能够自动到下一个匹配的{@link ControllerEngine}对象去判断.
  * <p>
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
- * @author Li Weibo[weibo.leo@gmail.com]
+ * @author laxser  Date 2012-5-21 上午11:30:47
+@contact [duqifan@gmail.com]
+@ModuleEngine.java
+
  */
 public class ModuleEngine implements Engine {
 

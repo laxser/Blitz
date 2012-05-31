@@ -26,7 +26,9 @@ import com.laxser.blitz.web.Invocation;
 /**
  * 用于识别识别${xxx}串或识别${xxx?}串，并进行替换的工具类
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-5-30 下午4:53:28
+@contact [duqifan@gmail.com]
+@PlaceHolderUtils.java
  * 
  */
 public class PlaceHolderUtils {

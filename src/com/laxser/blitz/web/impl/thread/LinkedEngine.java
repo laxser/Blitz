@@ -25,7 +25,10 @@ import com.laxser.blitz.web.impl.mapping.MappingNode;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-5-21 上午11:30:31
+@contact [duqifan@gmail.com]
+@LinkedEngine.java
+
  * 
  */
 public final class LinkedEngine implements Engine {

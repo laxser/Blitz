@@ -12,7 +12,10 @@ import org.apache.commons.logging.LogFactory;
  * 
  * 这样做的好处很明显，你能更快的定位错误
  * 
- * @author Li Weibo[weibo.leo@gmail.com]
+ * @author laxser  Date 2012-5-30 下午4:54:08
+@contact [duqifan@gmail.com]
+@StackTraceSimplifier.java
+
  */
 public class StackTraceSimplifier {
 

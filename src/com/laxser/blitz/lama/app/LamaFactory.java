@@ -26,8 +26,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * <p>
  * 
  * String confLocation = "classpath*:/applicationContext*.xml";<br>
- * JadeFactory jade = new JadeFactory(confLocation);<br>
- * UserDAO userDAO = jade.getDao(UserDAO.class);
+ * LamaFactory lama = new LamaFactory(confLocation);<br>
+ * UserDAO userDAO = lama.getDao(UserDAO.class);
  * 
  * @author laxser  Date 2012-3-22 下午3:38:49
 @contact [duqifan@gmail.com]

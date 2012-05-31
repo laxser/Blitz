@@ -22,7 +22,10 @@ import com.laxser.blitz.BlitzConstants;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-5-21 上午11:13:09
+@contact [duqifan@gmail.com]
+@ViewPathCache.java
+
  * 
  */
 public class ViewPathCache {

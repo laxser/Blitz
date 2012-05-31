@@ -22,17 +22,17 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 用{@link SQL}注解标注在Jade DAO方法上，表示这个DAO方法所要执行的SQL语句。
+ * 用{@link SQL}注解标注在Lama DAO方法上，表示这个DAO方法所要执行的SQL语句。
  * <p>
  * 
- * Jade把SQL语句分为查询类型和更改类型，Jade进行SQL类型分类的基于两个目的：<br>
+ * Lama把SQL语句分为查询类型和更改类型，Lama进行SQL类型分类的基于两个目的：<br>
  * <ul>
  * <li>1）因为这两种类型的SQL返回结果不一样，查询类型返回结果是一个结果集， 更新类型的SQL返回结果只是一个数字表示更新的条目；</li>
  * <li>2）是为了能够使SQL能够在master- slave的数据库架构中发往正确的目的数据库执行。</li>
  * </ul>
  * <p>
  * 
- * 简单地，Jade认为所有以SELECT开始在SQL是查询类型的，其他的都是更新类型的。不过当然这种分法非常不合理，
+ * 简单地，Lama认为所有以SELECT开始在SQL是查询类型的，其他的都是更新类型的。不过当然这种分法非常不合理，
  * 比如SHOW语句所代表的就应该是查询类型的，在这种情况下，我们还是希望由开发者您在{@link SQL}
  * 指定吧，如果有需要执行一些非SELECT的查询类型的语句的话。
  * <p>
@@ -68,13 +68,13 @@ public @interface SQL {
 
     /**
      * 
-     * @return Jade支持的SQL语句
+     * @return Lama支持的SQL语句
      */
     String value();
 
     /**
      * 返回该语句的类型，查询类型或变更类型。
-     * 默认Jade认为只有以SELECT开始的才是查询类型，其他的为变更类型。开发者通过这个属性用来变更Jade默认的处理!
+     * 默认Lama认为只有以SELECT开始的才是查询类型，其他的为变更类型。开发者通过这个属性用来变更Lama默认的处理!
      * 
      * @return 查询类型
      */

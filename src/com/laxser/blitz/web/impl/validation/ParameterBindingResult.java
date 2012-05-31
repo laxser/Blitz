@@ -24,7 +24,10 @@ import com.laxser.blitz.web.Invocation;
 /**
  * 控制器action方法普通参数绑定信息类，
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-5-21 上午11:13:35
+@contact [duqifan@gmail.com]
+@ParameterBindingResult.java
+
  * 
  */
 public class ParameterBindingResult extends AbstractBindingResult {

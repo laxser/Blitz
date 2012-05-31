@@ -31,9 +31,9 @@ import com.laxser.blitz.lama.provider.Definition;
  * 提供 DAO 对象的 Spring-framework {@link FactoryBean} 工厂。
  * 
  * @author laxser  Date 2012-3-22 下午3:43:13
-@contact [duqifan@gmail.com]
-@LamaDaoFactoryBean.java
-
+ *@contact [duqifan@gmail.com]
+ *@LamaDaoFactoryBean.java
+ *
  * 
  */
 public class LamaDaoFactoryBean<T> implements FactoryBean, InitializingBean {

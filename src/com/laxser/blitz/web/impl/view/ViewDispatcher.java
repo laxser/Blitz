@@ -24,7 +24,10 @@ import com.laxser.blitz.web.Invocation;
 
 /**
  * 
- * @author 王志亮 [qieqie.wang@gmail.com]
+ * @author laxser  Date 2012-5-21 上午11:13:21
+@contact [duqifan@gmail.com]
+@ViewDispatcher.java
+
  * 
  */
 public interface ViewDispatcher {
