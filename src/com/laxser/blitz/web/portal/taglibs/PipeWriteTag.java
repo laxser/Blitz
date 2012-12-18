@@ -49,7 +49,7 @@ public class PipeWriteTag extends TagSupport {
         Invocation inv = InvocationUtils.getCurrentThreadInvocation();
         if (inv == null) {
             if (logger.isWarnEnabled()) {
-                logger.warn("it is not in a rose request: '"
+                logger.warn("it is not in a blitz request: '"
                         + ((HttpServletRequest) pageContext.getRequest()).getRequestURI() + "'");
             }
             return SKIP_BODY;

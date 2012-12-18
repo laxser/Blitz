@@ -18,7 +18,7 @@ public class IgnoredPathEquals implements IgnoredPath {
 
     @Override
     public boolean hit(RequestPath requestPath) {
-        return requestPath.getRosePath().equals(path);
+        return requestPath.getBlitzPath().equals(path);
     }
 }
 

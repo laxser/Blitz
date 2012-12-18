@@ -83,7 +83,7 @@ public class LoadScope {
             if (componetType.startsWith("!")) {
                 componetType = componetType.substring(1);
             } else {
-                componetConfValue = componetConfValue + ", net.paoding.rose";
+                componetConfValue = componetConfValue + ", com.laxser.blitz";
             }
             String[] packages = StringUtils.split(componetConfValue, ", \t\n\r\0");//都好和\t之间有一个空格
             this.load.put(componetType, packages);

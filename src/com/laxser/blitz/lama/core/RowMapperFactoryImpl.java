@@ -125,7 +125,7 @@ public class RowMapperFactoryImpl implements RowMapperFactory {
                         + "&checkProperties=" + checkProperties + "]";
                 rowMapper = rowMappers.get(key);
                 if (rowMapper == null) {
-                    rowMapper = new BeanPropertyRowMapper(rowType, checkColumns, checkProperties); // jade's BeanPropertyRowMapper here
+                    rowMapper = new BeanPropertyRowMapper(rowType, checkColumns, checkProperties); // lama's BeanPropertyRowMapper here
                     rowMappers.put(key, rowMapper);
                 }
             }

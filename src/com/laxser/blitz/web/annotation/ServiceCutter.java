@@ -42,14 +42,14 @@ public @interface ServiceCutter {
      * the max concurrent for Controller class or method<br />
      * The default is -1 (unlimited)
      * @return the max count of concurrent or -1 (never cutting)
-     * @since 2010-01-25
+     * @since 2012.4.1
      */
     int maxConcurrent() default -1;
     /**
      * the default page (or controller) when reaching the max concurrent
      * @return HTTP CODE 403
-     * @since 2010-01-25
-     * @see {@link net.paoding.rose.web.instruction.Instruction}
+     * @since 2012.3.22
+     * @see {@link com.laxser.blitz.web.instruction.Instruction}
      */
     public String instruction() default "status:403; througput";
 }

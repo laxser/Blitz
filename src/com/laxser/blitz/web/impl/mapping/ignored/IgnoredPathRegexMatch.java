@@ -20,6 +20,6 @@ public class IgnoredPathRegexMatch implements IgnoredPath {
 
     @Override
     public boolean hit(RequestPath requestPath) {
-        return path.matcher(requestPath.getRosePath()).matches();
+        return path.matcher(requestPath.getBlitzPath()).matches();
     }
 }

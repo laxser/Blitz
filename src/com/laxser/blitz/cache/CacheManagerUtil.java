@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * This class provides the access to {@link CacheManager}<br />
  * Using {@link CacheManagerResolver} if you want to using this in Spring or
- * Rose.
+ * Blitz.
  * 
 @author laxser  Date 2012-4-8 下午5:28:34
 @contact [duqifan@gmail.com]

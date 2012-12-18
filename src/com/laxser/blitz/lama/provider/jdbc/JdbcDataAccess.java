@@ -76,22 +76,22 @@ public class JdbcDataAccess implements DataAccess {
     // ------------------------------------------------
 
     @Override
-    public List<?> select(String jadeSQL, Modifier modifier, Map<String, Object> parametersAsMap,
+    public List<?> select(String lamaSQL, Modifier modifier, Map<String, Object> parametersAsMap,
             RowMapper rowMapper) {
-        SQLInterpreterResult result = interpret(jadeSQL, modifier, parametersAsMap);
+        SQLInterpreterResult result = interpret(lamaSQL, modifier, parametersAsMap);
         return jdbc.query(modifier, result.getSQL(), result.getParameters(), rowMapper);
     }
 
     @Override
-    public int update(String jadeSQL, Modifier modifier, Map<String, Object> parametersAsMap) {
-        SQLInterpreterResult result = interpret(jadeSQL, modifier, parametersAsMap);
+    public int update(String lamaSQL, Modifier modifier, Map<String, Object> parametersAsMap) {
+        SQLInterpreterResult result = interpret(lamaSQL, modifier, parametersAsMap);
         return jdbc.update(modifier, result.getSQL(), result.getParameters());
     }
 
     @Override
-    public Object insertReturnId(String jadeSQL, Modifier modifier,
+    public Object insertReturnId(String lamaSQL, Modifier modifier,
             Map<String, Object> parametersAsMap) {
-        SQLInterpreterResult result = interpret(jadeSQL, modifier, parametersAsMap);
+        SQLInterpreterResult result = interpret(lamaSQL, modifier, parametersAsMap);
         return jdbc.insertAndReturnId(modifier, result.getSQL(), result.getParameters());
     }
 
@@ -173,12 +173,12 @@ public class JdbcDataAccess implements DataAccess {
 
     }
 
-    protected SQLInterpreterResult interpret(String jadeSQL, Modifier modifier,
+    protected SQLInterpreterResult interpret(String lamaSQL, Modifier modifier,
             Map<String, Object> parametersAsMap) {
         SQLInterpreterResult result = null;
         // 
         for (SQLInterpreter interpreter : interpreters) {
-            String sql = (result == null) ? jadeSQL : result.getSQL();
+            String sql = (result == null) ? lamaSQL : result.getSQL();
             Object[] parameters = (result == null) ? null : result.getParameters();
             SQLInterpreterResult t = interpreter.interpret(dataSource, sql, modifier,
                     parametersAsMap, parameters);

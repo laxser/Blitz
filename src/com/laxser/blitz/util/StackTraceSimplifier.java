@@ -22,7 +22,7 @@ public class StackTraceSimplifier {
 	protected static Log logger = LogFactory.getLog(StackTraceSimplifier.class);
 
 	private static final Pattern EXCLUDED_STACK_TRACE = Pattern
-			.compile("^net\\.paoding\\.rose\\.web\\.(((ControllerInterceptorAdapter" +
+			.compile("^com\\.laxser\\.blitz\\.web\\.(((ControllerInterceptorAdapter" +
 					"|InterceptorDelegate|OncePerRequestInterceptorDelegate).*)"
 					+ "|(impl\\.thread\\.ActionEngine\\$InvocationChainImpl.*))");
 
@@ -68,10 +68,10 @@ public class StackTraceSimplifier {
 	public static void main(String[] args) {
 
 		String[] ss = {
-				"net.paoding.rose.web.impl.thread.ActionEngine$InvocationChainImpl.doNext(ActionEngine.java:468)",
-				"net.paoding.rose.web.InterceptorDelegate.roundInvocation(InterceptorDelegate.java:106)",
-				"net.paoding.rose.web.OncePerRequestInterceptorDelegate.roundInvocation(OncePerRequestInterceptorDelegate.java:67)",
-				"net.paoding.rose.web.ControllerInterceptorAdapter.round(ControllerInterceptorAdapter.java:136)" };
+				"com.laxser.blitz.web.impl.thread.ActionEngine$InvocationChainImpl.doNext(ActionEngine.java:468)",
+				"com.laxser.blitz.web.InterceptorDelegate.roundInvocation(InterceptorDelegate.java:106)",
+				"com.laxser.blitz.web.OncePerRequestInterceptorDelegate.roundInvocation(OncePerRequestInterceptorDelegate.java:67)",
+				"com.laxser.blitz.web.ControllerInterceptorAdapter.round(ControllerInterceptorAdapter.java:136)" };
 
 		for (int i = 0; i < ss.length; i++) {
 			if (!EXCLUDED_STACK_TRACE.matcher(ss[i]).matches()) {

@@ -104,13 +104,13 @@ public class ModuleEngine implements Engine {
     }
 
     @Override
-    public int isAccepted(HttpServletRequest rose) {
+    public int isAccepted(HttpServletRequest blitz) {
         return 1;
     }
 
     @Override
-    public Object execute(Blitz rose) throws Throwable {
-        Invocation inv = rose.getInvocation();
+    public Object execute(Blitz blitz) throws Throwable {
+        Invocation inv = blitz.getInvocation();
 
         // 按照Spring规范，设置当前的applicationContext对象到request对象中,用于messageSource/国际化等功能
         inv.getRequest().setAttribute(BlitzConstants.WEB_APPLICATION_CONTEXT_ATTRIBUTE,
@@ -119,7 +119,7 @@ public class ModuleEngine implements Engine {
         boolean isMultiPartRequest = false;
         try {
             isMultiPartRequest = checkMultipart(inv);
-            return rose.doNext();
+            return blitz.doNext();
         } catch (Throwable invException) {
             // 抛出异常了(可能是拦截器或控制器抛出的)，此时让该控制器所在模块的ControllerErrorHanlder处理
 
@@ -153,12 +153,12 @@ public class ModuleEngine implements Engine {
                             + " will handle the exception: " //
                             + cause.getClass().getName() + ":" + cause.getMessage());
                 }
-                rose.getInvocation().setViewModule(errorHandlerModule);
+                blitz.getInvocation().setViewModule(errorHandlerModule);
                 // 
-                HttpServletRequest request = rose.getInvocation().getRequest();
+                HttpServletRequest request = blitz.getInvocation().getRequest();
                 WebUtils.exposeErrorRequestAttributes(request, cause, null);
                 StackTraceSimplifier.simplify(cause);	//对栈进行简化
-                instruction = errorHandler.onError(rose.getInvocation(), cause);
+                instruction = errorHandler.onError(blitz.getInvocation(), cause);
             }
 
             // onError方法返回null，表示需要重新throw出去

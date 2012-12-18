@@ -16,7 +16,7 @@
 package com.laxser.blitz.web;
 
 /**
- * 如果控制器action方法的参数对象实现了 {@link BeforeInterceptors}接口，Rose将拦截所有拦截器之前，调用
+ * 如果控制器action方法的参数对象实现了 {@link BeforeInterceptors}接口，Blitz将拦截所有拦截器之前，调用
  * {@link #doBeforeInterceptors(Invocation)}方法
  * 
  * @author laxser  Date 2012-3-22 下午4:57:08

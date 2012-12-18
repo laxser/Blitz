@@ -55,7 +55,6 @@ import java.lang.annotation.Target;
  * <span style='margin-left:50px;'> public User getUser(@SQLParam("user") User user);</code><span> <br>
  * <p>
  * 在此，我们也示例了{@link SQL}注解所使用语句和标准的SQL的有所区别。为了更加有效地支持编程，此处的SQL具有较为丰富的法，具体请见：
- * http://paoding-rose.googlecode.com/....
  * 
  * @author laxser  Date 2012-3-22 下午3:37:49
 @contact [duqifan@gmail.com]

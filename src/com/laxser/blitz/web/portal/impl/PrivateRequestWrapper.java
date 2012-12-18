@@ -272,7 +272,6 @@ public class PrivateRequestWrapper implements HttpServletRequest {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public synchronized Map getParameterMap() {
         // 如果没有同步，tomcat下可能出现java.lang.IllegalStateException: No modifications are allowed to a locked ParameterMap
-        // see http://code.google.com/p/paoding-rose/issues/detail?id=9
         return getRequest().getParameterMap();
     }
 

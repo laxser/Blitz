@@ -27,7 +27,7 @@ import com.laxser.blitz.lama.provider.SQLInterpreterResult;
 public class SimpleSQLInterpreter implements SQLInterpreter {
 
 	@Override
-	// 转换 JadeSQL 语句为正常的 SQL 语句
+	// 转换 lamaSQL 语句为正常的 SQL 语句
 	public SQLInterpreterResult interpret(DataSource dataSource, String sql,
 			Modifier modifier, Map<String, Object> parametersAsMap,
 			Object[] parametersAsArray) {

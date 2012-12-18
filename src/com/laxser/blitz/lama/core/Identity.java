@@ -28,7 +28,7 @@ package com.laxser.blitz.lama.core;
  * public long save(String name);
  * </pre>
  * 
- * 在Jade DAO方法声明其返回类型为 {@link Identity}表示，在执行插入语句后返回数据库设置的ID（自增ID等）
+ * 在Lama DAO方法声明其返回类型为 {@link Identity}表示，在执行插入语句后返回数据库设置的ID（自增ID等）
  * 
  * @author laxser  Date 2012-3-22 下午3:49:27
 @contact [duqifan@gmail.com]

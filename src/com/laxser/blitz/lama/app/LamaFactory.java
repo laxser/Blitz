@@ -21,8 +21,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * 如果您所写的程序在Spring容器之外，不能用 {@link Autowired} 注入一个Jade DAO，此时可使用
- * {@link LamaFactory} 来使用Jade DAO。
+ * 如果您所写的程序在Spring容器之外，不能用 {@link Autowired} 注入一个Lama DAO，此时可使用
+ * {@link LamaFactory} 来使用Lama DAO。
  * <p>
  * 
  * String confLocation = "classpath*:/applicationContext*.xml";<br>

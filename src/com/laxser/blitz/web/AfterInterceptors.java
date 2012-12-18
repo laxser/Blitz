@@ -16,7 +16,7 @@
 package com.laxser.blitz.web;
 
 /**
- * 如果控制器action方法的参数对象实现了 {@link AfterInterceptors}接口，Rose将在所在拦截器拦截之后，调用
+ * 如果控制器action方法的参数对象实现了 {@link AfterInterceptors}接口，Blitz将在所在拦截器拦截之后，调用
  * {@link #doAfterInterceptors(Invocation, Object)}方法
  * 
  * @author laxser  Date 2012-3-22 下午4:57:19

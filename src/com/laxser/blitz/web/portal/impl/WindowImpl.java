@@ -40,9 +40,9 @@ class WindowImpl implements Window {
     static {
         String pv;
         try {
-            pv = System.getProperty("rose.portal.may_interrupt_if_running");
+            pv = System.getProperty("blitz.portal.may_interrupt_if_running");
             if (pv == null) {
-                pv = (String) System.getenv("rose.portal.may_interrupt_if_running");
+                pv = (String) System.getenv("blitz.portal.may_interrupt_if_running");
             }
         } catch (Exception e) {
             e.printStackTrace();

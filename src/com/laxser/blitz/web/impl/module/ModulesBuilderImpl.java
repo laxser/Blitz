@@ -27,8 +27,6 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletContext;
-
-
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -58,6 +56,7 @@ import com.laxser.blitz.web.annotation.Ignored;
 import com.laxser.blitz.web.annotation.Interceptor;
 import com.laxser.blitz.web.annotation.NotForSubModules;
 import com.laxser.blitz.web.annotation.Path;
+import com.laxser.blitz.web.impl.module.ModulesBuilderImpl.InterceptorBuilder;
 import com.laxser.blitz.web.paramresolver.ParamResolver;
 
 /**
@@ -141,7 +140,7 @@ public class ModulesBuilderImpl implements ModulesBuilder {
                 ControllerInterceptor most = InterceptorDelegate
                         .getMostInnerInterceptor(interceptor);
 
-                if (!most.getClass().getName().startsWith("net.paoding.rose.web")) {
+                if (!most.getClass().getName().startsWith("com.laxser.blitz.web")) {
 
                     // 先排除deny禁止的
                     if (moduleResource.getInterceptedDeny() != null) {
@@ -150,7 +149,7 @@ public class ModulesBuilderImpl implements ModulesBuilder {
                             iter.remove();
                             if (logger.isDebugEnabled()) {
                                 logger.debug("module '" + module.getMappingPath()
-                                        + "': remove interceptor by rose.properties: "
+                                        + "': remove interceptor by blitz.properties: "
                                         + most.getClass().getName());
                             }
                             continue;
@@ -163,7 +162,7 @@ public class ModulesBuilderImpl implements ModulesBuilder {
                             iter.remove();
                             if (logger.isDebugEnabled()) {
                                 logger.debug("module '" + module.getMappingPath()
-                                        + "': remove interceptor by rose.properties: "
+                                        + "': remove interceptor by blitz.properties: "
                                         + most.getClass().getName());
                             }
                             continue;
@@ -220,7 +219,7 @@ public class ModulesBuilderImpl implements ModulesBuilder {
                 // 先判断是否有"名字"一样的拦截器
                 InterceptorDelegate position = interceptors.get(j);
                 if (position.getName().equals(interceptor.getName())) {
-                    // rose内部要求interceptor要有一个唯一的标识
+                    // blitz内部要求interceptor要有一个唯一的标识
                     // 请这两个类的提供者商量改类名，不能同时取一样的类名
                     // 如果是通过@Component等设置名字的，则不要设置一样
                     ControllerInterceptor duplicated1 = InterceptorDelegate
@@ -497,14 +496,14 @@ public class ModulesBuilderImpl implements ModulesBuilder {
             } else {
                 interceporName = StringUtils.removeEnd(beanName, BlitzConstants.INTERCEPTOR_SUFFIX);
             }
-            final String rose = "rose";
-            if (interceporName.startsWith(rose)
-                    && (interceporName.length() == rose.length() || Character
-                            .isUpperCase(interceporName.charAt(rose.length())))
-                    && !userClass.getName().startsWith("net.paoding.rose.")) {
+            final String blitz = "blitz";
+            if (interceporName.startsWith(blitz)
+                    && (interceporName.length() == blitz.length() || Character
+                            .isUpperCase(interceporName.charAt(blitz.length())))
+                    && !userClass.getName().startsWith("com.laxser.blitz.")) {
                 throw new IllegalArgumentException("illegal interceptor name '" + interceporName
                         + "' for " + userClass.getName()
-                        + ": don't starts with 'rose', it's reserved");
+                        + ": don't starts with 'blitz', it's reserved");
             }
 
             builder.name(interceporName);

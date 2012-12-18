@@ -17,6 +17,6 @@ public class IgnoredPathStarts implements IgnoredPath {
 
     @Override
     public boolean hit(RequestPath requestPath) {
-        return requestPath.getRosePath().startsWith(path);
+        return requestPath.getBlitzPath().startsWith(path);
     }
 }

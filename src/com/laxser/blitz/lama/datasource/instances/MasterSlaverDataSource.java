@@ -4,10 +4,12 @@ package com.laxser.blitz.lama.datasource.instances;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
@@ -23,6 +25,12 @@ import com.laxser.blitz.lama.core.SQLThreadLocal;
  * date: 2012-4-11
  */
 public class MasterSlaverDataSource implements DataSource {
+	
+	@Override
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
     private List<DataSource> masters = Collections.emptyList();
 
@@ -109,5 +117,7 @@ public class MasterSlaverDataSource implements DataSource {
     public Object unwrap(Class arg0) throws SQLException {
         return null;
     }
+
+	
 
 }

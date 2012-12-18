@@ -24,7 +24,7 @@ import com.laxser.blitz.web.annotation.Intercepted;
  * {@link ControllerInterceptorAdapter})。
  * <p>
  * 如果你要实现的拦截器是模块特有的，可以直接在控制器所在package中实现它，并以Interceptor作为命名的结尾，
- * Rose会自动把它load到module中，使得控制器能够被该拦截器拦截。<br>
+ * Blitz会自动把它load到module中，使得控制器能够被该拦截器拦截。<br>
  * 同时因为某种原因，想暂时禁止掉这个module中的某个拦截器又不想删除它或者去除implements
  * ControllerInterceptor, 此时把类标注成@Ignored即可
  * <p>

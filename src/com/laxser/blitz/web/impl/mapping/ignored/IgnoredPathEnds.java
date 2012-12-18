@@ -16,6 +16,6 @@ public class IgnoredPathEnds implements IgnoredPath {
 
     @Override
     public boolean hit(RequestPath requestPath) {
-        return requestPath.getRosePath().endsWith(path);
+        return requestPath.getBlitzPath().endsWith(path);
     }
 }

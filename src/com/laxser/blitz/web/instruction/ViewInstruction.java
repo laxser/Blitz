@@ -57,7 +57,7 @@ public class ViewInstruction extends AbstractInstruction
 
 	protected static Log logger = LogFactory.getLog(ViewInstruction.class);
 
-	public static final String ROSE_INVOCATION = "roseInvocation";
+	public static final String BLITZ_INVOCATION = "blitzInvocation";
 
 	// 视图名称到视图地址的映射(缓存这个映射避免重复计算视图地址)
 	private static Map<String, ViewPathCache> globalViewPathCaches = new HashMap<String, ViewPathCache>();
@@ -87,7 +87,7 @@ public class ViewInstruction extends AbstractInstruction
 					request.getLocale());
 
 			if (!Thread.interrupted()) {
-				inv.addModel(ROSE_INVOCATION, inv);
+				inv.addModel(BLITZ_INVOCATION, inv);
 				view.render(inv.getModel().getAttributes(), request, response);
 			}
 			else {

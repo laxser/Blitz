@@ -53,7 +53,7 @@ public class DefaultPipeRender implements WindowRender {
             json.put("css", css);
         }
         out.append("<script type=\"text/javascript\">");
-        out.append("rosepipe.addWindow(");
+        out.append("blitzpipe.addWindow(");
         out.append(json.toString());
         out.append(");");
         out.append("</script>");

@@ -135,12 +135,12 @@ public class ModuleAppContext extends XmlWebApplicationContext {
 
     @Override
     protected void prepareBeanFactory(ConfigurableListableBeanFactory beanFactory) {
-        prepareBeanFactoryByRose(beanFactory);
+        prepareBeanFactoryByBlitz(beanFactory);
         super.prepareBeanFactory(beanFactory);
     }
 
-    /** Rose对BeanFactory的特殊处理，必要时可以覆盖这个方法去掉Rose的特有的处理 */
-    protected void prepareBeanFactoryByRose(ConfigurableListableBeanFactory beanFactory) {
+    /** Blitz对BeanFactory的特殊处理，必要时可以覆盖这个方法去掉Blitz的特有的处理 */
+    protected void prepareBeanFactoryByBlitz(ConfigurableListableBeanFactory beanFactory) {
         BeanDefinitionRegistry registry = (BeanDefinitionRegistry) beanFactory;
         AnnotationConfigUtils.registerAnnotationConfigProcessors(registry);
         if (messageBaseNames != null && messageBaseNames.length > 0) {
@@ -148,7 +148,7 @@ public class ModuleAppContext extends XmlWebApplicationContext {
         }
     }
 
-    /** 如果配置文件没有自定义的messageSource定义，则由Rose根据最佳实践进行预设 */
+    /** 如果配置文件没有自定义的messageSource定义，则由Blitz根据最佳实践进行预设 */
     public static void registerMessageSourceIfNecessary(BeanDefinitionRegistry registry,
             String[] messageBaseNames) {
         if (!ArrayUtils.contains(registry.getBeanDefinitionNames(), MESSAGE_SOURCE_BEAN_NAME)) {

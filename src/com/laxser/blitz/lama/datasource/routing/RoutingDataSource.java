@@ -18,7 +18,9 @@ package com.laxser.blitz.lama.datasource.routing;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
@@ -60,6 +62,12 @@ import javax.sql.DataSource;
  * 
  */
 public class RoutingDataSource implements DataSource {
+	
+	@Override
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
     /**
      * 数据库连接的实际提供者

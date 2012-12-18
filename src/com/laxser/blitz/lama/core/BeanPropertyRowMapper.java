@@ -188,7 +188,7 @@ public class BeanPropertyRowMapper implements RowMapper {
      */
     public Object mapRow(ResultSet rs, int rowNumber) throws SQLException {
         // spring's : Object mappedObject = BeanUtils.instantiateClass(this.mappedClass);
-        // jade's : private Object instantiateClass(this.mappedClass);
+        // lama's : private Object instantiateClass(this.mappedClass);
         // why: 经过简单的笔记本测试，mappedClass.newInstrance性能比BeanUtils.instantiateClass(mappedClass)快1个数量级
         Object mappedObject = instantiateClass(this.mappedClass);
         BeanWrapper bw = new BeanWrapperImpl(mappedObject);

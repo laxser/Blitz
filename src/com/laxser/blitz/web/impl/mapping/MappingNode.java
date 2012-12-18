@@ -141,7 +141,7 @@ public class MappingNode implements Comparable<MappingNode> {
         MappingNode curNode = this;
 
         // 给当前判断结点判断的path
-        String remaining = requestPath.getRosePath();
+        String remaining = requestPath.getBlitzPath();
 
         // 最后一次匹配结果
         MatchResult last = null;
@@ -171,7 +171,7 @@ public class MappingNode implements Comparable<MappingNode> {
                 // 兄弟，你上!
                 if (curNode.sibling == null) {
                     if (debugEnabled) {
-                        logger.debug("['" + requestPath.getRosePath() + "'] not matched");
+                        logger.debug("['" + requestPath.getBlitzPath() + "'] not matched");
                     }
                     return null;
                 }
@@ -180,7 +180,7 @@ public class MappingNode implements Comparable<MappingNode> {
             }
 
             if (debugEnabled) {
-                logger.debug("['" + requestPath.getRosePath() + "'] matched(" //
+                logger.debug("['" + requestPath.getBlitzPath() + "'] matched(" //
                         + (matchResults.size() + 1) + "): '" + last + "'");
             }
 
@@ -191,14 +191,14 @@ public class MappingNode implements Comparable<MappingNode> {
             //
             if (remaining.length() == 0) {
                 if (debugEnabled) {
-                    logger.debug("['" + requestPath.getRosePath() + "'] matched over.");
+                    logger.debug("['" + requestPath.getBlitzPath() + "'] matched over.");
                 }
                 return matchResults;
             }
             //
             if (curNode.leftMostChild == null) {
                 if (debugEnabled) {
-                    logger.debug("['" + requestPath.getRosePath() + "'] not matched");
+                    logger.debug("['" + requestPath.getBlitzPath() + "'] not matched");
                 }
                 return null;
             }

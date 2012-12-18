@@ -149,7 +149,7 @@ public abstract class GenericWindowContainer implements WindowRender, WindowCont
         request.setAttribute("$$biltz-portal.window.path", windowPath);
 
         // PortalWaitInterceptor#waitForWindows
-        // RoseFilter#supportsRosepipe
+        // BlitzFilter#supportsBlitzpipe
         request.removeAttribute(BlitzConstants.PIPE_WINDOW_IN);
 
         // 定义窗口任务

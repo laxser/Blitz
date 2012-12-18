@@ -43,7 +43,7 @@ public class RequestPath {
 
     private String ctxpath; // by servlet container
 
-    private String rosePath; // = modulePath + controllerPath + actionPath
+    private String blitzPath; // = modulePath + controllerPath + actionPath
 
     private String modulePath; //
 
@@ -60,7 +60,7 @@ public class RequestPath {
         setUri(uri);
         setCtxpath(ctxpath);
         setDispatcher(dispatcher);
-        setRosePath(uri.substring(ctxpath.length()));
+        setBlitzPath(uri.substring(ctxpath.length()));
     }
 
     public RequestPath(HttpServletRequest request) {
@@ -77,10 +77,10 @@ public class RequestPath {
             uri = (String) request.getAttribute(WebUtils.INCLUDE_REQUEST_URI_ATTRIBUTE);
             invocationCtxpath = ((String) request
                     .getAttribute(WebUtils.INCLUDE_CONTEXT_PATH_ATTRIBUTE));
-            setRosePath((String) request.getAttribute(WebUtils.INCLUDE_SERVLET_PATH_ATTRIBUTE));
+            setBlitzPath((String) request.getAttribute(WebUtils.INCLUDE_SERVLET_PATH_ATTRIBUTE));
         } else {
             uri = request.getRequestURI();
-            this.setRosePath(request.getServletPath());
+            this.setBlitzPath(request.getServletPath());
             if (request.getAttribute(WebUtils.FORWARD_REQUEST_URI_ATTRIBUTE) == null) {
                 this.setDispatcher(Dispatcher.REQUEST);
             } else {
@@ -110,9 +110,9 @@ public class RequestPath {
         // 记录到requestPath的ctxpath值在include的情况下是invocationCtxpath
 
         if (getCtxpath().length() <= 1) {
-            setRosePath(getUri());
+            setBlitzPath(getUri());
         } else {
-            setRosePath(getUri().substring(
+            setBlitzPath(getUri().substring(
                     (invocationCtxpath == null ? getCtxpath() : invocationCtxpath).length()));
         }
     }
@@ -200,21 +200,21 @@ public class RequestPath {
         this.ctxpath = ctxpath;
     }
 
-    public String getRosePath() {
-        return rosePath;
+    public String getBlitzPath() {
+        return blitzPath;
     }
 
-    public void setRosePath(String rosePath) {
+    public void setBlitzPath(String blitzPath) {
         // 如果是"/"，也转化为""
-        if (rosePath.equals("") || rosePath.equals("/")) {
-            this.rosePath = "";
+        if (blitzPath.equals("") || blitzPath.equals("/")) {
+            this.blitzPath = "";
             return;
         }
-        // 只判断一次，如果有以request请求以'//'结尾的，rose肯定会映射失败，但是rose不会为了兼容做这个事情
-        if (rosePath.charAt(rosePath.length() - 1) == '/') {
-            rosePath = rosePath.substring(0, rosePath.length() - 1);
+        // 只判断一次，如果有以request请求以'//'结尾的，blitz肯定会映射失败，但是blitz不会为了兼容做这个事情
+        if (blitzPath.charAt(blitzPath.length() - 1) == '/') {
+            blitzPath = blitzPath.substring(0, blitzPath.length() - 1);
         }
-        this.rosePath = rosePath;
+        this.blitzPath = blitzPath;
     }
 
     public String getModulePath() {
@@ -227,7 +227,7 @@ public class RequestPath {
 
     public String getControllerPathInfo() {
         if (controllerPathInfo == null) {
-            controllerPathInfo = rosePath.substring(modulePath.length());
+            controllerPathInfo = blitzPath.substring(modulePath.length());
         }
         return controllerPathInfo;
     }
@@ -250,7 +250,7 @@ public class RequestPath {
 
     @Override
     public String toString() {
-        return "ctxpath=" + ctxpath + "; pathInfo=" + rosePath + "; modulePath=" + modulePath
+        return "ctxpath=" + ctxpath + "; pathInfo=" + blitzPath + "; modulePath=" + modulePath
                 + "; controllerPath=" + controllerPath + "; actionPath=" + actionPath;
     }
 

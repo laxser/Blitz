@@ -30,7 +30,7 @@ public class BlitzBeanUtils extends BeanUtils {
 
     public static Object instantiateClass(@SuppressWarnings("rawtypes") Class clazz) throws BeanInstantiationException {
         // spring's : Object mappedObject = BeanUtils.instantiateClass(this.mappedClass);
-        // jade's : private Object instantiateClass(this.mappedClass);
+        // lama's : private Object instantiateClass(this.mappedClass);
         // why: 经过简单的笔记本测试，mappedClass.newInstrance性能比BeanUtils.instantiateClass(mappedClass)快1个数量级
         try {
             return clazz.newInstance();

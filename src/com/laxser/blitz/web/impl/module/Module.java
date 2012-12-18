@@ -35,7 +35,7 @@ import com.laxser.blitz.web.paramresolver.ParamResolver;
  * 但在实现上模块的路径是由其名字决定的，即path=/name，比如名字为admin的模块，路径将是/admin。
  * 作为一个特例，名字为root的模块路径则只是空串。
  * <p>
- * 一个HTTP请求将根据它的URI，映射到相应的web程序中(由web容器处理)，而后又映射给具体的module模块(由Rose处理)。
+ * 一个HTTP请求将根据它的URI，映射到相应的web程序中(由web容器处理)，而后又映射给具体的module模块(由Blitz处理)。
  * 映射规则以模块的路径为依据(名字此时不参与这个决策)。
  * <p>
  * 

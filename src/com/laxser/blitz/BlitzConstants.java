@@ -59,7 +59,7 @@ public interface BlitzConstants {
     public static final String CONF_MODULE_IGNORED = "module.ignored";
 
     /**
-     * 用于在每个module的包的blitz.properties中，Rose将使用这个属性的值作为所在module的path
+     * 用于在每个module的包的blitz.properties中，Blitz将使用这个属性的值作为所在module的path
      * <p>
      * 可以使${parent.module.path}引用上一次级module的path，比如${parent.module.path}/
      * admin<br>

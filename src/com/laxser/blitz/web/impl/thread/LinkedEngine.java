@@ -65,12 +65,12 @@ public final class LinkedEngine implements Engine {
     }
 
     @Override
-    public Object execute(Blitz rose) throws Throwable {
+    public Object execute(Blitz blitz) throws Throwable {
         if (Thread.currentThread().isInterrupted()) {
             logger.info("stop to call the next engine: thread is interrupted");
             return null;
         }
-        return target.execute(rose);
+        return target.execute(blitz);
     }
 
     @Override

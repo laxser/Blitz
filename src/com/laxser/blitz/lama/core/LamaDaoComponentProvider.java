@@ -82,7 +82,7 @@ public class LamaDaoComponentProvider implements ResourceLoaderAware {
     private final List<TypeFilter> excludeFilters = new LinkedList<TypeFilter>();
 
 /**
-     * Create a JadeDaoComponentProvider.
+     * Create a LamaDaoComponentProvider.
      * 
      * @param useDefaultFilters whether to register the default filters for
      *        the {@link Component @Component}, {@link Repository
@@ -176,13 +176,13 @@ public class LamaDaoComponentProvider implements ResourceLoaderAware {
             boolean debugEnabled = logger.isDebugEnabled();
             Resource[] resources = this.resourcePatternResolver.getResources(packageSearchPath);
             if (debugEnabled) {
-                logger.debug("[jade/find] find " + resources.length + " resources for "
+                logger.debug("[lama/find] find " + resources.length + " resources for "
                         + packageSearchPath);
             }
             for (int i = 0; i < resources.length; i++) {
                 Resource resource = resources[i];
                 if (traceEnabled) {
-                    logger.trace("[jade/find] scanning " + resource);
+                    logger.trace("[lama/find] scanning " + resource);
                 }
                 // resourcePatternResolver.getResources出来的classPathResources，metadataReader对其进行getInputStream的时候为什么返回null呢？
                 // 不得不做一个exists判断
@@ -221,7 +221,7 @@ public class LamaDaoComponentProvider implements ResourceLoaderAware {
                 }
             }
         } catch (IOException ex) {
-            throw new BeanDefinitionStoreException("I/O failure during jade scanning", ex);
+            throw new BeanDefinitionStoreException("I/O failure during lama scanning", ex);
         }
         return candidates;
     }

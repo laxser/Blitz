@@ -53,7 +53,6 @@ public class PipeInterceptor extends ControllerInterceptorAdapter {
     public Object after(Invocation inv, Object instruction) {
 
         // codes for fix this exception: "Cannot forward after response has been committed"
-        // @see RoseFilter#supportsRosepipe
         // @see PortalImpl#addWindow
         Pipe pipe = PortalUtils.getPipe(inv);
         if (pipe != null && pipe.getInvocation() == inv) {
