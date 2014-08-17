@@ -71,7 +71,7 @@ public class LoadScope {
             if (StringUtils.isBlank(loadScope)) {
                 continue;
             }
-            // 代表"controllers=com.renren.xoa, com.renren.yourapp"串
+     
             componetConf = componetConf.trim();
             int componetTypeIndex;
             String componetType = defType; // 代表"controllers", "applicationContext", "dao", "messages", "*"等串
