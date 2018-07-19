@@ -51,7 +51,7 @@ public class ResourceProtectionInterceptor extends ControllerInterceptorAdapter 
                 String hosturl = url.getHost().toLowerCase();
                 if (hosturl.endsWith(domainMain.toString())
                         || hosturl.endsWith(domainStatic.toString())
-                        || hosturl.endsWith("5q.com")) {
+                       ) {
                     // passed filtering
                 } else {
                     if (logger.isInfoEnabled()) {
